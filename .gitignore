@@ -2,3 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Hugo build output
+public/
+public */
+resources/
+
+# macOS
+.DS_Store
