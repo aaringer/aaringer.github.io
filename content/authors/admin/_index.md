@@ -120,3 +120,5 @@ I am a PhD student in Clinical and Developmental Psychology at University of Ore
 I am particularly interested in how personality traits and social relationships shape health outcomes over time. My current projects investigate stress, coping, and resilience in diverse populations.
 
 Before starting my PhD, I completed my BA in Psychology at Undergraduate University, where I developed my passion for research through work in behavioral science labs and an honors thesis project.
+
+Outside of research, I have a deep love for animals — they bring me endless joy and remind me why studying well-being matters.
