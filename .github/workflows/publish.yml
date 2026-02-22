@@ -4,9 +4,9 @@ env:
   WC_HUGO_VERSION: '0.136.5'
 
 on:
-  # Trigger the workflow on pushes to main or the active development branch
+  # Trigger the workflow on pushes to master (default branch) or main
   push:
-    branches: ["main", "claude/dark-academia-website-8RYDv"]
+    branches: ["master", "main"]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
