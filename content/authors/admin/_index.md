@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alexa Aringer
+title: Alexa S. Aringer
 
 # Full name (for SEO)
 first_name: Alexandra
