@@ -1,10 +1,11 @@
-# Earthy font theme — Crimson Pro for a refined academic serif look
+# Dark Academia font theme
+# Playfair Display for dramatic headings + Crimson Pro for scholarly body text
 name = "earthy"
 
-# Google Fonts: Crimson Pro — a scholarly serif designed for screen reading
-google_fonts = "Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap"
+# Google Fonts: Playfair Display (display headings) + Crimson Pro (body)
+google_fonts = "Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap"
 
-heading_font = "Crimson Pro"
+heading_font = "Playfair Display"
 body_font = "Crimson Pro"
 nav_font = "Crimson Pro"
 mono_font = "JetBrains Mono"

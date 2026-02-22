@@ -7,7 +7,7 @@
 appearance:
   theme:
     pack: "earthy"
-    mode: system   # respects user's OS light/dark preference
+    mode: dark   # dark academia default
   typography:
     font: "earthy"  # Crimson Pro serif — see data/fonts/earthy.toml
     size: "md"

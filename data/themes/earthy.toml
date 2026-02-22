@@ -1,26 +1,26 @@
-# Earthy academic theme — warm terracotta & cream
+# Dark Academia Theme — forest green + warm gold + aged parchment
 name = "earthy"
 light = true
 
-# Primary accent: warm terracotta/sienna
-primary = "#8B5E3C"
+# Primary accent: forest green (light) / warm gold used via custom SCSS (dark)
+primary = "#3D5C35"
 
-# Navbar
-menu_primary = "#FEFCF9"        # soft warm white
-menu_text = "#4A3728"           # dark warm brown
-menu_text_active = "#8B5E3C"    # match primary
-menu_title = "#2E1E14"          # near-black warm brown
+# Navbar — light mode
+menu_primary = "#F5ECD8"        # warm parchment
+menu_text = "#2A1E12"           # deep warm brown ink
+menu_text_active = "#3D5C35"    # forest green
+menu_title = "#1A1008"          # near-black warm
 
 # Light mode backgrounds
-background = "#FAF6F0"          # warm parchment/cream
-home_section_odd = "#FAF6F0"
-home_section_even = "#F0E8DC"   # slightly deeper warm cream
+background = "#F5ECD8"          # aged parchment
+home_section_odd = "#F5ECD8"
+home_section_even = "#EDE0CA"   # deeper aged parchment
 
 # Dark mode backgrounds
-dark_background = "#1A1510"
-dark_home_section_odd = "#1A1510"
-dark_home_section_even = "#231C15"
+dark_background = "#141210"
+dark_home_section_odd = "#141210"
+dark_home_section_even = "#1C1915"
 
 # Links — light mode
-link = "#8B5E3C"
-link_hover = "#6B4028"
+link = "#3D5C35"
+link_hover = "#2A4025"
