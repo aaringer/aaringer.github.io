@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ""
-date: 2024-01-01
+date: 2026-02-01
 type: landing
 
 design:
@@ -16,7 +16,7 @@ sections:
       username: admin
       button:
         text: Download CV
-        url: uploads/resume.pdf
+        url: https://www.dropbox.com/scl/fi/j64f4wi1w8k58hac0dfzw/AlexaAringer_CV.docx?rlkey=xuq3w1ljqpz9dsm4zum0ja3hc&st=20ktnmxf&dl=0
 
   - block: markdown
     content:
