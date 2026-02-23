@@ -1171,9 +1171,16 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-container a { color: var(--text-muted); }
 .footer-container a:hover { color: var(--primary); }
 
+/* ── Mobile name (shown only in single-column layout) ───────────── */
+
+.mobile-name { display: none; }
+
 /* ── Responsive ──────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
+  .mobile-name { display: block; text-align: center; width: 100%; }
+  .desktop-name { display: none; }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
