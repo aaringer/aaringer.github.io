@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-list">
+  <div class="container">
+    <header class="list-header">
+      <h1 class="page-title">Blog</h1>
+    </header>
+    <div class="blog-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="blog-item">
+        <span class="blog-date">{{ .Date.Format "January 2, 2006" }}</span>
+        <h2 class="blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Summary }}<p class="blog-summary">{{ . }}</p>{{ end }}
+        {{ if .Params.tags }}
+        <div class="tag-list">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="link-btn">Read more →</a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

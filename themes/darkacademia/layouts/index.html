@@ -1,0 +1,150 @@
+{{ define "main" }}
+{{ $admin := site.GetPage "authors/admin" }}
+
+{{/* ── About ──────────────────────────────────────────────────────── */}}
+<section class="section section-about" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-sidebar">
+        {{ $avatar := $admin.Resources.GetMatch "avatar*" }}
+        {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="Photo of {{ $admin.Title }}" class="avatar">
+        {{ else }}
+        <div class="avatar-placeholder">
+          {{ substr ($admin.Params.first_name | default "A") 0 1 }}{{ substr ($admin.Params.last_name | default "A") 0 1 }}
+        </div>
+        {{ end }}
+
+        {{ if $admin.Params.interests }}
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Interests</h3>
+          <ul class="interest-list">
+            {{ range $admin.Params.interests }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ if $admin.Params.education }}
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Education</h3>
+          {{ range $admin.Params.education }}
+          {{ $edu := . }}
+          <div class="edu-item">
+            <p class="edu-degree">{{ .area }}</p>
+            <p class="edu-institution">{{ .institution }}</p>
+            {{ with .date_start }}<p class="edu-dates">{{ dateFormat "2006" . }}{{ with $edu.date_end }} – {{ dateFormat "2006" . }}{{ else }} – present{{ end }}</p>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{ if $admin.Params.profiles }}
+        <div class="sidebar-block">
+          <div class="social-links">
+            {{ range $admin.Params.profiles }}
+            <a href="{{ .url }}" class="social-link" title="{{ .label }}" target="_blank" rel="noopener noreferrer">
+              {{ partial "icon.html" .icon }}
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="about-content">
+        <h1 class="about-name">{{ $admin.Title }}</h1>
+        <p class="about-role">{{ $admin.Params.role }}</p>
+        {{ range $admin.Params.organizations }}
+        <p class="about-org"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
+        {{ end }}
+
+        <div class="about-bio">
+          {{ $admin.Content }}
+        </div>
+
+        <div class="about-actions">
+          <a href="{{ "uploads/resume.pdf" | relURL }}" class="btn btn-primary" target="_blank" rel="noopener">
+            Download CV
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{/* ── Research Overview ───────────────────────────────────────────── */}}
+<section class="section section-alt" id="research">
+  <div class="container container-narrow">
+    <h2 class="section-title">Research Overview</h2>
+    <div class="research-overview">
+      <p>My research examines how social and psychological factors influence health and well-being across the lifespan. I use a combination of experimental methods, longitudinal surveys, and advanced statistical techniques to understand the complex interplay between personality, social relationships, and health outcomes. My work aims to identify modifiable factors that can promote resilience and positive health behaviors in diverse populations.</p>
+    </div>
+  </div>
+</section>
+
+{{/* ── Recent Publications ─────────────────────────────────────────── */}}
+<section class="section" id="publications">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recent Publications</h2>
+      <a href="{{ "/publication/" | relURL }}" class="section-link">View all →</a>
+    </div>
+    <div class="pub-list">
+      {{ $pubs := where site.RegularPages "Type" "publication" }}
+      {{ range ($pubs.ByDate.Reverse) }}
+      <article class="pub-item">
+        <div class="pub-meta">
+          <span class="pub-date">{{ .Date.Format "2006" }}</span>
+          {{ with .Params.publication_types }}{{ range . }}<span class="pub-type pub-type-{{ . }}">{{ if eq . "article-journal" }}Journal Article{{ else if eq . "paper-conference" }}Conference Paper{{ else if eq . "thesis" }}Thesis{{ else }}{{ . }}{{ end }}</span>{{ end }}{{ end }}
+        </div>
+        <h3 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+        {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+        {{ if .Params.tags }}
+        <div class="tag-list">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <div class="pub-links">
+          <a href="{{ .RelPermalink }}" class="link-btn">Details</a>
+          {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank">PDF</a>{{ end }}
+          {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+          {{ with .Params.url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
+          {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── Projects ─────────────────────────────────────────────────────── */}}
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Projects</h2>
+      <a href="{{ "/project/" | relURL }}" class="section-link">View all →</a>
+    </div>
+    <div class="project-grid">
+      {{ $projects := where site.RegularPages "Type" "project" }}
+      {{ range $projects.ByDate.Reverse }}
+      <article class="project-card">
+        <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.summary }}<p class="project-summary">{{ . }}</p>{{ end }}
+        {{ if .Params.tags }}
+        <div class="tag-list">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="link-btn">Learn more →</a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

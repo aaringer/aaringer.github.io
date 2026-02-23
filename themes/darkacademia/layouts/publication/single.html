@@ -1,0 +1,54 @@
+{{ define "main" }}
+<article class="pub-single">
+  <div class="container container-narrow">
+    <header class="pub-header">
+      {{ with .Params.publication_types }}
+      <div class="pub-type-badge">
+        {{ range . }}
+        <span class="pub-type pub-type-{{ . }}">
+          {{ if eq . "article-journal" }}Journal Article{{ else if eq . "paper-conference" }}Conference Paper{{ else if eq . "thesis" }}Thesis{{ else if eq . "preprint" }}Preprint{{ else }}{{ . | title }}{{ end }}
+        </span>
+        {{ end }}
+      </div>
+      {{ end }}
+      <h1 class="pub-title">{{ .Title }}</h1>
+      {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+      {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+      {{ with .Date }}<p class="pub-date">{{ .Format "January 2006" }}</p>{{ end }}
+    </header>
+
+    {{ with .Params.abstract }}
+    <div class="pub-abstract">
+      <h2>Abstract</h2>
+      <p>{{ . }}</p>
+    </div>
+    {{ end }}
+
+    <div class="pub-links-block">
+      {{ with .Params.url_pdf }}<a href="{{ . }}" class="btn btn-primary" target="_blank" rel="noopener">PDF</a>{{ end }}
+      {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">DOI</a>{{ end }}
+      {{ with .Params.url_code }}<a href="{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">Code</a>{{ end }}
+      {{ with .Params.url_dataset }}<a href="{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">Dataset</a>{{ end }}
+      {{ with .Params.url_poster }}<a href="{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">Poster</a>{{ end }}
+      {{ with .Params.url_slides }}<a href="{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">Slides</a>{{ end }}
+      {{ with .Params.url_video }}<a href="{{ . }}" class="btn btn-outline" target="_blank" rel="noopener">Video</a>{{ end }}
+    </div>
+
+    {{ if .Params.tags }}
+    <div class="tag-list" style="margin-top: 1.5rem;">
+      {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .Content }}
+    <div class="page-content" style="margin-top: 2rem;">
+      {{ . }}
+    </div>
+    {{ end }}
+
+    <div class="page-back">
+      <a href="{{ "/publication/" | relURL }}" class="back-link">← All Publications</a>
+    </div>
+  </div>
+</article>
+{{ end }}

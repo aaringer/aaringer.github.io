@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}" data-theme="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "nav.html" . }}
+  <main class="main-content" id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script>
+    // Apply stored theme before paint to avoid flash
+    (function () {
+      var stored = localStorage.getItem('da-theme');
+      if (stored) {
+        document.documentElement.setAttribute('data-theme', stored);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+
+    // Theme toggle
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var html = document.documentElement;
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('da-theme', next);
+    });
+
+    // Mobile nav toggle
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var menu = document.getElementById('nav-menu');
+      var btn = document.getElementById('nav-toggle');
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('nav-menu').classList.remove('open');
+        document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

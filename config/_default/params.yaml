@@ -1,67 +1,22 @@
-# SITE SETUP
-# Guide: https://docs.hugoblox.com/tutorial/
-# Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
-
-# Appearance — earthy custom theme (data/themes/earthy.toml, data/fonts/earthy.toml)
-appearance:
-  theme:
-    pack: "earthy"
-    mode: dark   # dark academia default
-  typography:
-    font: "earthy"  # Crimson Pro serif — see data/fonts/earthy.toml
-    size: "md"
-
-# Remove "Published with Hugo Blox Builder" footer credit
-i_am_a_sponsor: true
+# SITE PARAMS
 
 # SEO
 marketing:
   seo:
     site_type: Person
-    local_business_type: ''
-    org_name: 'Alexa Aringer'  # CHANGE THIS to your name
-    description: 'Personal academic website showcasing research, publications, and projects.'
-    twitter: ''  # Add your Twitter handle if you have one (without @)
+    org_name: 'Alexa Aringer'
+    description: 'Personal academic website of Alexa Aringer, PhD student in Clinical Psychology at the University of Oregon.'
+    twitter: ''
   analytics:
-    google_analytics: ''  # Add your Google Analytics ID if you want to track visitors
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
-  verification:
-    google: ''
-    baidu: ''
+    google_analytics: ''
 
 # Site header
 header:
   navbar:
-    enable: true
-    blox: "navbar"
-    fixed_to_top: true
-    show_search: true
-    show_theme_chooser: true
     logo:
-      text: "Alexa Aringer"  # CHANGE THIS to your name
+      text: "Alexa Aringer"
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Alexandra S. Aringer. This work is licensed under {license}'
-    license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
-
-# Localization
-locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
-
-# Site features
-features:
-  math:
-    enable: false  # Set to true if you need to display mathematical equations
-  privacy_pack:
-    enable: false
+    notice: '© {year} Alexandra S. Aringer'

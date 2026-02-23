@@ -1,0 +1,106 @@
+{{ define "main" }}
+{{ $admin := site.GetPage "authors/admin" }}
+
+{{/* ── Work Experience ─────────────────────────────────────────────── */}}
+{{ if $admin.Params.work }}
+<section class="section" id="experience">
+  <div class="container container-narrow">
+    <h1 class="page-title">Experience</h1>
+    <h2 class="section-title">Work</h2>
+    <div class="timeline">
+      {{ range $admin.Params.work }}
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">{{ .position }}</h3>
+          <p class="timeline-org">
+            {{ if .company_url }}<a href="{{ .company_url }}" target="_blank" rel="noopener">{{ .company_name }}</a>{{ else }}{{ .company_name }}{{ end }}
+          </p>
+          <p class="timeline-dates">
+            {{ with .date_start }}{{ dateFormat "Jan 2006" . }}{{ end }}
+            –
+            {{ if .date_end }}{{ dateFormat "Jan 2006" .date_end }}{{ else }}Present{{ end }}
+          </p>
+          {{ with .summary }}<div class="timeline-summary">{{ . | markdownify }}</div>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Education ───────────────────────────────────────────────────── */}}
+{{ if $admin.Params.education }}
+<section class="section section-alt" id="education">
+  <div class="container container-narrow">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      {{ range $admin.Params.education }}
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">{{ .area }}</h3>
+          <p class="timeline-org">{{ .institution }}</p>
+          <p class="timeline-dates">
+            {{ with .date_start }}{{ dateFormat "2006" . }}{{ end }}
+            {{ if .date_end }}– {{ dateFormat "2006" .date_end }}{{ else if .date_start }}– Present{{ end }}
+          </p>
+          {{ with .summary }}<div class="timeline-summary">{{ . | markdownify }}</div>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Skills ──────────────────────────────────────────────────────── */}}
+{{ if $admin.Params.skills }}
+<section class="section" id="skills">
+  <div class="container container-narrow">
+    <h2 class="section-title">Skills</h2>
+    {{ range $admin.Params.skills }}
+    <div class="skill-group">
+      <h3 class="skill-group-title">{{ .name }}</h3>
+      <div class="skill-items">
+        {{ range .items }}
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">{{ .name }}</span>
+            <span class="skill-pct">{{ .percent }}%</span>
+          </div>
+          {{ with .description }}<p class="skill-desc">{{ . }}</p>{{ end }}
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: {{ .percent }}%"></div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Awards ──────────────────────────────────────────────────────── */}}
+{{ if $admin.Params.awards }}
+<section class="section section-alt" id="awards">
+  <div class="container container-narrow">
+    <h2 class="section-title">Awards &amp; Fellowships</h2>
+    <div class="awards-list">
+      {{ range $admin.Params.awards }}
+      <div class="award-item">
+        <h3 class="award-title">
+          {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+        </h3>
+        <p class="award-awarder">{{ .awarder }}{{ with .date }} · {{ dateFormat "2006" . }}{{ end }}</p>
+        {{ with .summary }}<p class="award-summary">{{ . | markdownify }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
