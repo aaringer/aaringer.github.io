@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alexa S. Aringer
+title: Alexa Aringer
 
 # Full name (for SEO)
 first_name: Alexandra
@@ -17,7 +17,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Student in Clinical Psychology
+role: PhD Student in Clinical and Developmental Psychology\nNSF Graduate Research fellow
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -52,11 +52,11 @@ education:
     date_end: ''
     summary: |
       Research on social cognition and health behavior change.
-      Advised by Prof. Advisor Name.
-  - area: BA Psychology
-    institution: Undergraduate University
-    date_start: 2017-09-01
-    date_end: 2021-05-31
+      Advised by Dr. Sheila E. Crowell.
+  - area: BS, Psychology
+    institution: University of California, Riverside
+    date_start: 2018-09-01
+    date_end: 2020-05-31
     summary: |
       Graduated summa cum laude.
       Honors thesis on stress and coping in college students.
@@ -107,7 +107,7 @@ skills:
 awards:
   - title: Graduate Research Fellowship
     url: https://www.nsfgrfp.org/
-    date: '2022-01-01'
+    date: '2025-01-01'
     awarder: National Science Foundation
     summary: |
       Competitive fellowship supporting graduate research.
