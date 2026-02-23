@@ -56,7 +56,7 @@
 
       <div class="about-content">
         <h1 class="about-name">{{ $admin.Title }}</h1>
-        <p class="about-role">{{ $admin.Params.role }}</p>
+        <p class="about-role">{{ if reflect.IsSlice $admin.Params.role }}{{ range $i, $r := $admin.Params.role }}{{ if $i }}<br>{{ end }}{{ $r }}{{ end }}{{ else }}{{ $admin.Params.role }}{{ end }}</p>
         {{ range $admin.Params.organizations }}
         <p class="about-org"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
         {{ end }}

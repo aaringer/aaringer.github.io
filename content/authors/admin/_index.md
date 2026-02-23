@@ -17,8 +17,9 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Student in Clinical and Developmental Psychology
-NSF Graduate Research fellow
+role:
+  - PhD Student in Clinical and Developmental Psychology
+  - NSF Graduate Research fellow
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
