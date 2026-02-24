@@ -27,19 +27,28 @@ organizations:
     url: https://cas.uoregon.edu/directory/psychology/all/aaringer
 
 # Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
     url: 'mailto:aaringer@uoregon.edu'
     label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/yourusername
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexandra-aringer/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=dcLf21AAAAAJ
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/alexandra-aringer/
   - icon: academicons/orcid
     url: https://orcid.org/0009-0007-1017-9568
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Alexandra-Aringer-2   
+  - icon: brands/github
+    url: https://github.com/aaringer
+  - icon: academicons/osf
+    url: https://osf.io/vafdq/
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/aaringer.bsky.social
+  - icon: brands/twitter
+    url: https://x.com/AlexaAringer
+
+
 
 interests:
   - Social Psychology
