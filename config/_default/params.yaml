@@ -5,7 +5,7 @@ marketing:
   seo:
     site_type: Person
     org_name: 'Alexa Aringer'
-    description: 'Personal academic website of Alexa Aringer, PhD student in Clinical Psychology at the University of Oregon.'
+    description: 'Personal academic website of Alexa Aringer, PhD student in Clinical and Developmental Psychology at the University of Oregon.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -19,4 +19,4 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Alexandra S. Aringer'
+    notice: '© {year} Alexandra S. Aringer. All rights reserved.'
