@@ -3,6 +3,7 @@
 
 # Website name
 title: Alexa Aringer
+copyright: "© {year} Alexa Aringer"
 
 # Custom theme — no external dependencies
 theme: darkacademia
