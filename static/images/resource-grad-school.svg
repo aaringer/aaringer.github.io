@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <linearGradient id="gs-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1a10"/>
+      <stop offset="50%" stop-color="#1a2e18"/>
+      <stop offset="100%" stop-color="#0d1e0e"/>
+    </linearGradient>
+    <radialGradient id="gs-lantern" cx="50%" cy="52%" r="38%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.28"/>
+      <stop offset="45%" stop-color="#8a6820" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0f1a10" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gs-ground-warm" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#2a3a18" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0d1e0e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gs-text-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1a10" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0d1e0e" stop-opacity="0.50"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="300" fill="url(#gs-sky)"/>
+  <!-- Warm lantern glow at center -->
+  <rect width="800" height="300" fill="url(#gs-lantern)"/>
+
+  <!-- Stars (fewer — overcast / dawn feel) -->
+  <circle cx="72"  cy="28"  r="1.0" fill="#ddd0a0" opacity="0.60"/>
+  <circle cx="180" cy="42"  r="0.8" fill="#ddd0a0" opacity="0.50"/>
+  <circle cx="260" cy="20"  r="1.2" fill="#ddd0a0" opacity="0.65"/>
+  <circle cx="390" cy="30"  r="0.7" fill="#ddd0a0" opacity="0.45"/>
+  <circle cx="470" cy="50"  r="0.9" fill="#ddd0a0" opacity="0.55"/>
+  <circle cx="590" cy="22"  r="1.1" fill="#ddd0a0" opacity="0.60"/>
+  <circle cx="680" cy="44"  r="0.8" fill="#ddd0a0" opacity="0.55"/>
+  <circle cx="750" cy="28"  r="1.0" fill="#ddd0a0" opacity="0.50"/>
+  <circle cx="130" cy="65"  r="0.7" fill="#ddd0a0" opacity="0.40"/>
+  <circle cx="540" cy="60"  r="0.8" fill="#ddd0a0" opacity="0.45"/>
+
+  <!-- Lantern body (hanging center) -->
+  <!-- Cord -->
+  <line x1="400" y1="14" x2="400" y2="68" stroke="#c9a84c" stroke-width="1" opacity="0.50"/>
+  <!-- Lantern frame -->
+  <rect x="386" y="68" width="28" height="38" rx="3" fill="#c9a84c" opacity="0.12"/>
+  <rect x="386" y="68" width="28" height="38" rx="3" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.65"/>
+  <!-- Lantern glow inner -->
+  <rect x="390" y="72" width="20" height="30" rx="2" fill="#f0d870" opacity="0.20"/>
+  <!-- Lantern flame -->
+  <ellipse cx="400" cy="87" rx="4" ry="6" fill="#f0d870" opacity="0.55"/>
+  <ellipse cx="400" cy="84" rx="2.5" ry="3.5" fill="#fff8d0" opacity="0.80"/>
+  <!-- Bottom cap -->
+  <polygon points="386,106 400,116 414,106" fill="#c9a84c" opacity="0.50"/>
+  <!-- Top cap -->
+  <rect x="388" y="64" width="24" height="6" rx="2" fill="#c9a84c" opacity="0.55"/>
+
+  <!-- Ground glow -->
+  <rect width="800" height="300" fill="url(#gs-ground-warm)"/>
+  <ellipse cx="400" cy="288" rx="470" ry="50" fill="#2a3a18" opacity="0.20"/>
+
+  <!-- Far trees -->
+  <polygon points="120,225 133,112 146,225" fill="#122416" opacity="0.55"/>
+  <polygon points="112,248 133,140 154,248" fill="#122416" opacity="0.55"/>
+  <polygon points="560,220 574,105 588,220" fill="#122416" opacity="0.55"/>
+  <polygon points="552,244 574,132 596,244" fill="#122416" opacity="0.55"/>
+  <polygon points="300,230 313,125 326,230" fill="#122416" opacity="0.45"/>
+  <polygon points="292,252 313,152 334,252" fill="#122416" opacity="0.45"/>
+  <polygon points="490,228 503,118 516,228" fill="#122416" opacity="0.45"/>
+  <polygon points="482,250 503,146 524,250" fill="#122416" opacity="0.45"/>
+
+  <!-- Mid trees -->
+  <polygon points="28,278  46,138  64,278"  fill="#0c1e0e"/>
+  <polygon points="19,300  46,166  73,300"  fill="#0c1e0e"/>
+  <polygon points="90,270  108,128 126,270" fill="#0a1c0c"/>
+  <polygon points="81,298  108,156 135,298" fill="#0a1c0c"/>
+  <polygon points="195,275 214,132 233,275" fill="#0c1e0e"/>
+  <polygon points="186,300 214,160 242,300" fill="#0c1e0e"/>
+  <polygon points="636,272 655,130 674,272" fill="#0a1c0c"/>
+  <polygon points="627,298 655,158 683,298" fill="#0a1c0c"/>
+  <polygon points="700,275 720,135 740,275" fill="#0c1e0e"/>
+  <polygon points="690,300 720,164 750,300" fill="#0c1e0e"/>
+
+  <!-- Foreground silhouettes -->
+  <polygon points="-18,300 16,140 50,300"   fill="#06100a"/>
+  <polygon points="-30,300 16,172 62,300"   fill="#06100a"/>
+  <polygon points="258,300 288,120 318,300" fill="#06100a"/>
+  <polygon points="245,300 288,152 331,300" fill="#06100a"/>
+  <polygon points="482,300 512,128 542,300" fill="#06100a"/>
+  <polygon points="470,300 512,160 554,300" fill="#06100a"/>
+  <polygon points="755,300 782,145 809,300" fill="#06100a"/>
+  <polygon points="743,300 782,178 821,300" fill="#06100a"/>
+
+  <!-- Ground -->
+  <rect x="0" y="282" width="800" height="18" fill="#06100a"/>
+
+  <!-- Text overlay -->
+  <rect width="800" height="300" fill="url(#gs-text-fade)"/>
+
+  <!-- Ornate border -->
+  <rect x="14" y="14" width="772" height="272" fill="none" stroke="#b8902a" stroke-width="1.5" opacity="0.65"/>
+  <rect x="20" y="20" width="760" height="260" fill="none" stroke="#b8902a" stroke-width="0.5" opacity="0.30"/>
+
+  <!-- Corner flourishes -->
+  <path d="M14,34 L14,14 L34,14" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.70"/>
+  <path d="M766,14 L786,14 L786,34" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.70"/>
+  <path d="M14,266 L14,286 L34,286" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.70"/>
+  <path d="M786,266 L786,286 L766,286" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.70"/>
+
+  <!-- Decorative rule -->
+  <line x1="225" y1="188" x2="375" y2="188" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <line x1="425" y1="188" x2="575" y2="188" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <circle cx="400" cy="188" r="3.5" fill="none" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <circle cx="400" cy="188" r="1.2" fill="#b8902a" opacity="0.55"/>
+  <circle cx="225" cy="188" r="2" fill="#b8902a" opacity="0.40"/>
+  <circle cx="575" cy="188" r="2" fill="#b8902a" opacity="0.40"/>
+
+  <!-- Title text -->
+  <text x="400" y="164" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="26" font-weight="400" letter-spacing="4"
+        fill="#f0e8c8" opacity="0.95">GRAD SCHOOL</text>
+  <text x="400" y="208" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="15" font-weight="400" letter-spacing="8"
+        fill="#b8902a" opacity="0.90">RESOURCES</text>
+</svg>

@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <linearGradient id="mh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1820"/>
+      <stop offset="55%" stop-color="#152e2a"/>
+      <stop offset="100%" stop-color="#0a1a14"/>
+    </linearGradient>
+    <radialGradient id="mh-moon-glow" cx="62%" cy="28%" r="28%">
+      <stop offset="0%" stop-color="#d8c88a" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#1a3530" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0c1820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mh-ground-glow" cx="50%" cy="100%" r="55%">
+      <stop offset="0%" stop-color="#1e3d30" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a1a14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mh-text-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1820" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a1a14" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="300" fill="url(#mh-sky)"/>
+  <rect width="800" height="300" fill="url(#mh-moon-glow)"/>
+
+  <!-- Stars -->
+  <circle cx="58"  cy="32"  r="1.1" fill="#e0d0a0" opacity="0.75"/>
+  <circle cx="140" cy="22"  r="0.8" fill="#e0d0a0" opacity="0.55"/>
+  <circle cx="215" cy="48"  r="1.3" fill="#e0d0a0" opacity="0.80"/>
+  <circle cx="305" cy="18"  r="0.9" fill="#e0d0a0" opacity="0.60"/>
+  <circle cx="370" cy="40"  r="0.7" fill="#e0d0a0" opacity="0.50"/>
+  <circle cx="440" cy="12"  r="1.0" fill="#e0d0a0" opacity="0.70"/>
+  <circle cx="550" cy="35"  r="0.8" fill="#e0d0a0" opacity="0.60"/>
+  <circle cx="618" cy="52"  r="1.2" fill="#e0d0a0" opacity="0.75"/>
+  <circle cx="695" cy="20"  r="0.9" fill="#e0d0a0" opacity="0.65"/>
+  <circle cx="755" cy="42"  r="1.0" fill="#e0d0a0" opacity="0.55"/>
+  <circle cx="88"  cy="62"  r="0.7" fill="#e0d0a0" opacity="0.45"/>
+  <circle cx="330" cy="60"  r="0.8" fill="#e0d0a0" opacity="0.50"/>
+  <circle cx="740" cy="68"  r="0.7" fill="#e0d0a0" opacity="0.45"/>
+  <circle cx="170" cy="80"  r="0.6" fill="#e0d0a0" opacity="0.35"/>
+  <circle cx="500" cy="58"  r="0.9" fill="#e0d0a0" opacity="0.55"/>
+
+  <!-- Moon -->
+  <circle cx="496" cy="78" r="34" fill="#d8c88a" opacity="0.10"/>
+  <circle cx="496" cy="78" r="22" fill="#e0d4a0" opacity="0.22"/>
+  <circle cx="496" cy="78" r="15" fill="#f0e8c0" opacity="0.55"/>
+  <circle cx="496" cy="78" r="10" fill="#f8f0d0" opacity="0.80"/>
+  <!-- Moon craters suggestion -->
+  <circle cx="492" cy="74" r="3" fill="#e8e0b8" opacity="0.30"/>
+  <circle cx="500" cy="82" r="2" fill="#e8e0b8" opacity="0.25"/>
+
+  <!-- Mist / ground glow -->
+  <rect width="800" height="300" fill="url(#mh-ground-glow)"/>
+  <ellipse cx="400" cy="285" rx="480" ry="55" fill="#1e3d30" opacity="0.25"/>
+
+  <!-- Far trees (lightest, most transparent) -->
+  <polygon points="155,220 168,108 181,220" fill="#142c22" opacity="0.55"/>
+  <polygon points="148,242 168,135 188,242" fill="#142c22" opacity="0.55"/>
+  <polygon points="580,215 594,100 608,215" fill="#142c22" opacity="0.55"/>
+  <polygon points="572,238 594,128 616,238" fill="#142c22" opacity="0.55"/>
+  <polygon points="350,225 362,118 374,225" fill="#142c22" opacity="0.45"/>
+  <polygon points="343,245 362,145 381,245" fill="#142c22" opacity="0.45"/>
+
+  <!-- Mid trees -->
+  <polygon points="42,275  58,142  74,275"  fill="#0e2218"/>
+  <polygon points="34,298  58,170 82,298"   fill="#0e2218"/>
+  <polygon points="108,268 125,130 142,268" fill="#0c1e15"/>
+  <polygon points="100,295 125,158 150,295" fill="#0c1e15"/>
+  <polygon points="228,272 245,135 262,272" fill="#0e2218"/>
+  <polygon points="220,298 245,162 270,298" fill="#0e2218"/>
+  <polygon points="650,268 668,128 686,268" fill="#0c1e15"/>
+  <polygon points="641,295 668,155 695,295" fill="#0c1e15"/>
+  <polygon points="715,272 733,140 751,272" fill="#0e2218"/>
+  <polygon points="706,298 733,168 760,298" fill="#0e2218"/>
+
+  <!-- Foreground trees (darkest silhouettes) -->
+  <polygon points="-15,300 18,145 51,300"   fill="#071210"/>
+  <polygon points="-26,300 18,178 62,300"   fill="#071210"/>
+  <polygon points="295,300 322,118 349,300" fill="#071210"/>
+  <polygon points="283,300 322,150 361,300" fill="#071210"/>
+  <polygon points="455,300 484,132 513,300" fill="#071210"/>
+  <polygon points="444,300 484,162 524,300" fill="#071210"/>
+  <polygon points="760,300 785,148 810,300" fill="#071210"/>
+  <polygon points="750,300 785,180 820,300" fill="#071210"/>
+
+  <!-- Ground strip -->
+  <rect x="0" y="280" width="800" height="20" fill="#071210"/>
+
+  <!-- Text legibility overlay -->
+  <rect width="800" height="300" fill="url(#mh-text-fade)"/>
+
+  <!-- Ornate border -->
+  <rect x="14" y="14" width="772" height="272" fill="none" stroke="#b8902a" stroke-width="1.5" opacity="0.65"/>
+  <rect x="20" y="20" width="760" height="260" fill="none" stroke="#b8902a" stroke-width="0.5" opacity="0.30"/>
+
+  <!-- Corner flourishes -->
+  <path d="M14,34 L14,14 L34,14" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.7"/>
+  <path d="M766,14 L786,14 L786,34" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.7"/>
+  <path d="M14,266 L14,286 L34,286" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.7"/>
+  <path d="M786,266 L786,286 L766,286" fill="none" stroke="#b8902a" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Decorative rule around text -->
+  <line x1="220" y1="162" x2="375" y2="162" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <line x1="425" y1="162" x2="580" y2="162" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <circle cx="400" cy="162" r="3.5" fill="none" stroke="#b8902a" stroke-width="0.8" opacity="0.55"/>
+  <circle cx="400" cy="162" r="1.2" fill="#b8902a" opacity="0.55"/>
+  <circle cx="220" cy="162" r="2" fill="#b8902a" opacity="0.40"/>
+  <circle cx="580" cy="162" r="2" fill="#b8902a" opacity="0.40"/>
+
+  <!-- Title text -->
+  <text x="400" y="138" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="26" font-weight="400" letter-spacing="4"
+        fill="#f0e8c8" opacity="0.95">MENTAL HEALTH</text>
+  <text x="400" y="182" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="15" font-weight="400" letter-spacing="8"
+        fill="#b8902a" opacity="0.90">RESOURCES</text>
+</svg>

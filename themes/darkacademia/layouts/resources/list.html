@@ -4,6 +4,8 @@
     <header class="list-header">
       <h1 class="page-title">Resources</h1>
     </header>
+
+    {{/* ── Intro blurb + button ── */}}
     {{ if .Content }}
     <div class="resources-intro">
       {{ .Content }}
@@ -12,21 +14,59 @@
       {{ end }}
     </div>
     {{ end }}
-    <div class="blog-list">
-      {{ range .Pages.ByDate.Reverse }}
+
+    <hr class="resources-divider">
+
+    {{/* ── Navigation image buttons ── */}}
+    <nav class="resource-nav" aria-label="Resource sections">
+      <a href="#mental-health" class="resource-nav-card">
+        <img src="{{ "/images/resource-mental-health.svg" | relURL }}"
+             alt="Mental Health Resources" width="800" height="300">
+      </a>
+      <a href="#grad-school" class="resource-nav-card">
+        <img src="{{ "/images/resource-grad-school.svg" | relURL }}"
+             alt="Grad School Resources" width="800" height="300">
+      </a>
+    </nav>
+
+    <hr class="resources-divider">
+
+    {{/* ── Mental Health Resources section ── */}}
+    <div class="resource-section" id="mental-health">
+      <h2 class="resource-section-title">
+        <a href="#mental-health">Mental Health Resources</a>
+      </h2>
+      <p class="resource-section-blurb">
+        A curated list of mental health resources for graduate students and early-career researchers.
+      </p>
+      {{ $mh := where .Pages ".Params.category" "mental-health" }}
+      {{ range $mh.ByDate.Reverse }}
       <article class="blog-item">
-        <span class="blog-date">{{ .Date.Format "January 2, 2006" }}</span>
-        <h2 class="blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h3 class="blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{ with .Summary }}<p class="blog-summary">{{ . }}</p>{{ end }}
-        {{ if .Params.tags }}
-        <div class="tag-list">
-          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
         <a href="{{ .RelPermalink }}" class="link-btn">Read more →</a>
       </article>
       {{ end }}
     </div>
+
+    {{/* ── Grad School Resources section ── */}}
+    <div class="resource-section" id="grad-school">
+      <h2 class="resource-section-title">
+        <a href="#grad-school">Grad School Resources</a>
+      </h2>
+      <p class="resource-section-blurb">
+        Tools, guides, and advice for navigating the graduate school admissions process and life as a graduate student.
+      </p>
+      {{ $gs := where .Pages ".Params.category" "grad-school" }}
+      {{ range $gs.ByDate.Reverse }}
+      <article class="blog-item">
+        <h3 class="blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Summary }}<p class="blog-summary">{{ . }}</p>{{ end }}
+        <a href="{{ .RelPermalink }}" class="link-btn">Read more →</a>
+      </article>
+      {{ end }}
+    </div>
+
   </div>
 </section>
 {{ end }}
