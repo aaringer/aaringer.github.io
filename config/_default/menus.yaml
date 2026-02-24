@@ -18,6 +18,9 @@ main:
  # - name: Teaching
  #   url: /teaching/
  #   weight: 45
+  - name: Clinical
+    url: /clinical/
+    weight: 45
   - name: Resources
     url: /resources/
     weight: 50

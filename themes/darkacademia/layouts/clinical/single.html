@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="clinical-page">
+  <div class="container">
+
+    <header class="list-header">
+      <h1 class="page-title">{{ .Title }}</h1>
+    </header>
+
+    <div class="clinical-layout">
+
+      {{/* ── Two text columns ── */}}
+      <div class="clinical-text">
+
+        {{ with .Params.assessment }}
+        <div class="clinical-col">
+          <h2 class="clinical-col-heading">{{ .heading }}</h2>
+          <div class="clinical-col-body">{{ .body | markdownify }}</div>
+        </div>
+        {{ end }}
+
+        <div class="clinical-col-divider" aria-hidden="true"></div>
+
+        {{ with .Params.experience }}
+        <div class="clinical-col">
+          <h2 class="clinical-col-heading">{{ .heading }}</h2>
+          <div class="clinical-col-body">{{ .body | markdownify }}</div>
+        </div>
+        {{ end }}
+
+      </div>
+
+      {{/* ── Decorative panel image ── */}}
+      <aside class="clinical-panel" aria-hidden="true">
+        <img src="{{ "/images/clinical-panel.svg" | relURL }}"
+             alt="" width="420" height="620">
+      </aside>
+
+    </div>
+  </div>
+</section>
+{{ end }}
