@@ -6,24 +6,24 @@ main:
   - name: Home
     url: /
     weight: 10
+  - name: Values
+    url: /values/
+    weight: 20
   - name: Publications
     url: /publication/
-    weight: 20
+    weight: 30
   - name: Projects
     url: /project/
-    weight: 30
-  - name: Teaching
-    url: /teaching/
     weight: 40
+ # - name: Teaching
+ #   url: /teaching/
+ #   weight: 45
   - name: Resources
     url: /resources/
     weight: 50
-  - name: Values
-    url: /values/
-    weight: 55
-  - name: Experience
-    url: /experience/
-    weight: 60
+  # - name: Experience
+  #   url: /experience/
+  #   weight: 60
   # - name: Contact
   #   url: /contact/
   #   weight: 70
