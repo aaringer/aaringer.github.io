@@ -19,6 +19,7 @@
         <div class="mobile-name">
           <h1 class="about-name">{{ $admin.Title }}</h1>
           <p class="about-role">{{ if reflect.IsSlice $admin.Params.role }}{{ range $i, $r := $admin.Params.role }}{{ if $i }}<br>{{ end }}{{ $r }}{{ end }}{{ else }}{{ $admin.Params.role }}{{ end }}</p>
+          {{ range $admin.Params.organizations }}<p class="about-org"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>{{ end }}
         </div>
 
         {{ if $admin.Params.interests }}
@@ -63,7 +64,7 @@
         <h1 class="about-name desktop-name">{{ $admin.Title }}</h1>
         <p class="about-role desktop-name">{{ if reflect.IsSlice $admin.Params.role }}{{ range $i, $r := $admin.Params.role }}{{ if $i }}<br>{{ end }}{{ $r }}{{ end }}{{ else }}{{ $admin.Params.role }}{{ end }}</p>
         {{ range $admin.Params.organizations }}
-        <p class="about-org"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
+        <p class="about-org desktop-name"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
         {{ end }}
 
         <div class="about-bio">
