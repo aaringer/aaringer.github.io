@@ -7,7 +7,11 @@ assessment:
   body: |
     [Your assessment content here. Describe the types of psychological assessments you conduct, populations you work with, and the purpose of these evaluations.]
 
-    [Additional details about your assessment approach, instruments used, or referral process can go here.]
+    - Weschler Adult Intelligence Scale, Fifth Edition (WAIS-5)
+    - Weschler Intelligence Scale for Children, Fifth Edition (WISC-V)
+    - Diagnostic Interview for Anxiety, Mood, and Obsessive-Compulsive and Related Neuropsychiatric Disorders (DIAMOND)
+    - Columbia Suicide Severity Rating Scale (C-SSRS)
+    - Cultural Formulation Interview (CFI)
 
 experience:
   heading: Experience
