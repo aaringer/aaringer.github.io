@@ -1,30 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <style>
-      .bg   { fill: #3A2E1A; }
-      .glow { fill: url(#g-dark); }
-      .letter { fill: #C9A84C; }
-      @media (prefers-color-scheme: light) {
-        .bg     { fill: #EDE0CA; }
-        .glow   { fill: url(#g-light); }
-        .letter { fill: #3D5C35; }
-      }
-    </style>
-    <!-- dark glow: warm ember from center -->
-    <radialGradient id="g-dark" cx="50%" cy="38%" r="58%">
+    <radialGradient id="g" cx="50%" cy="38%" r="58%">
       <stop offset="0%"   stop-color="#4E3D22"/>
       <stop offset="100%" stop-color="#3A2E1A"/>
-    </radialGradient>
-    <!-- light glow: soft parchment warmth -->
-    <radialGradient id="g-light" cx="50%" cy="38%" r="58%">
-      <stop offset="0%"   stop-color="#FAF4E6"/>
-      <stop offset="100%" stop-color="#EDE0CA"/>
     </radialGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="512" height="512" rx="256" class="bg"/>
-  <rect width="512" height="512" rx="256" class="glow" opacity="1"/>
+  <rect width="512" height="512" rx="256" fill="#3A2E1A"/>
+  <rect width="512" height="512" rx="256" fill="url(#g)"/>
 
   <!-- Serif "A" monogram -->
   <text
@@ -33,7 +17,7 @@
     font-family="Georgia, 'Times New Roman', serif"
     font-size="340"
     font-weight="700"
-    class="letter"
+    fill="#C9A84C"
     text-anchor="middle"
     dominant-baseline="auto"
     letter-spacing="-6">A</text>
