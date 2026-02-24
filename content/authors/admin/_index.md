@@ -117,10 +117,8 @@ awards:
 
 ## About Me
 
-I am a PhD student in Clinical and Developmental Psychology at University of Oregon, working with Dr. Sheila Crowell. My research examines how social and psychological factors influence health behavior and well-being. I use a combination of experimental methods, surveys, and longitudinal designs to understand these processes.
+I am a Clinical Psychology Ph.D. student and National Science Foundation (NSF) Graduate Research Fellow in the ORCHIDS Lab at the University of Oregon, advised by Dr. Sheila E. Crowell. My research examines how adversity and social determinants of health become biologically embedded to shape mental and physical health trajectories across development and generations. Drawing from developmental psychopathology and stress physiology, I investigate intergenerational trauma, physiological regulation, and biological processes using longitudinal and multi-method approaches. I conceptualize risk and resilience as products of dynamic developmental systems in which social conditions, biological processes, and lived experience continuously interact across time.
 
-I am particularly interested in how personality traits and social relationships shape health outcomes over time. My current projects investigate stress, coping, and resilience in diverse populations.
+<br>I am a clinical scientist guided by values of equity, integration, and respect for lived experience. My work is grounded in the belief that adversity-related suffering is not biologically predetermined nor reflective of individual failure, but emerges from developmental, intergenerational, and systemic processes. By identifying modifiable mechanisms across levels of analysis, I aim to inform equitable prevention and early intervention strategies that interrupt intergenerational pathways of harm.
 
-Before starting my PhD, I completed my BA in Psychology at Undergraduate University, where I developed my passion for research through work in behavioral science labs and an honors thesis project.
-
-Outside of research, I have a deep love for animals — they bring me endless joy and remind me why studying well-being matters.
+<br>Before beginning my doctoral training, I worked as a Research Coordinator and Lab Manager at Claremont McKenna College and UC Riverside. I earned my B.S. in Psychology from UC Riverside, graduating magna cum laude and Phi Beta Kappa. Outside of research, I enjoy spending time with my partner and pets, reading, and recharging through tea and creative projects.
