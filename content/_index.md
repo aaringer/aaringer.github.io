@@ -27,18 +27,18 @@ sections:
     design:
       columns: '1'
 
-  # Featured publications section - comment out if you don't have featured publications yet
-  # - block: collection
-  #   id: featured
-  #   content:
-  #     title: Featured Publications
-  #     filters:
-  #       folders:
-  #         - publication
-  #       featured_only: true
-  #   design:
-  #     view: article-grid
-  #     columns: 2
+   Featured publications section - comment out if you don't have featured publications yet
+   - block: collection
+     id: featured
+     content:
+       title: Featured Publications
+       filters:
+         folders:
+           - publication
+         featured_only: true
+     design:
+       view: article-grid
+       columns: 2
 
   - block: collection
     content:
