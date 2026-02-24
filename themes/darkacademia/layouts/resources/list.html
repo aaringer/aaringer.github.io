@@ -4,6 +4,14 @@
     <header class="list-header">
       <h1 class="page-title">Resources</h1>
     </header>
+    {{ if .Content }}
+    <div class="resources-intro">
+      {{ .Content }}
+      {{ with .Params.button }}
+      <a href="{{ .url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ .text }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
     <div class="blog-list">
       {{ range .Pages.ByDate.Reverse }}
       <article class="blog-item">
