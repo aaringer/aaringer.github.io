@@ -26,3 +26,5 @@ sections:
           - resources
     design:
       view: card
+
+---
