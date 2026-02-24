@@ -51,10 +51,12 @@ profiles:
 
 
 interests:
-  - Social Psychology
-  - Personality and Individual Differences
-  - Health Psychology
-  - Quantitative Methods
+  - Multilevel Developmental Psychopathology
+  - Biological Embedding of Stress
+  - Risk & Resilience
+  - Biopsychosocial Determinants of Health  
+  - Emotion Dysregulation
+  - Mixed Methods
 
 education:
   - area: PhD, Clinical & Developmental Psychology
@@ -62,7 +64,7 @@ education:
     date_start: 2024-09-01
     date_end: ''
     summary: |
-      Research on social cognition and health behavior change.
+      Research at the intersection between clinical and developmental psychology to discover how psychological struggles emerge and change across the lifespan.
       Advised by Dr. Sheila E. Crowell.
   - area: BS, Psychology
     institution: University of California, Riverside
@@ -70,7 +72,7 @@ education:
     date_end: 2020-05-31
     summary: |
       Graduated summa cum laude.
-      Honors thesis on stress and coping in college students.
+      Honors thesis mentored by Dr. Jimmy Calanchini.
 
 work:
   - position: Graduate Research Assistant
