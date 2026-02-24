@@ -1,7 +1,7 @@
 ---
 title: Resources
 view: compact
-
+---
   - block: markdown
     content:
       title: ''
@@ -13,4 +13,4 @@ view: compact
       button:
         text: Grad Sch 101 Doc
         url: https://www.dropbox.com/scl/fi/pw28igww48evhr505y6u8/Grad-Sch-101-Mentee-Resources.docx?rlkey=s793n0c9ohfkykmxaecwiviie&st=9gmttsbi&dl=0
----    
+ 
