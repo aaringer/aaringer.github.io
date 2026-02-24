@@ -12,15 +12,18 @@ main:
   - name: Projects
     url: /project/
     weight: 30
-  #   - name: Teaching
-  #     url: /teaching/
-  #     weight: 40
-  - name: Blog
-    url: /post/
+  - name: Teaching
+    url: /teaching/
+    weight: 40
+  - name: Resources
+    url: /resources/
     weight: 50
-  #   - name: Experience
-  #     url: /experience/
-  #    weight: 60
+  - name: Values
+    url: /values/
+    weight: 55
+  - name: Experience
+    url: /experience/
+    weight: 60
   # - name: Contact
   #   url: /contact/
   #   weight: 70
