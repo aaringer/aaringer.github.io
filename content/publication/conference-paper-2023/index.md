@@ -17,6 +17,9 @@ tags:
 - Daily Diary
 featured: false
 url_pdf: ''
+url_html: ''
+url_bib: ''
 url_code: ''
 url_poster: '/uploads/aps-poster-2023.pdf'
+image: ''
 ---

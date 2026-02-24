@@ -18,13 +18,14 @@ tags:
 - Behavior Change
 featured: true
 url_pdf: ''
+url_html: ''
+url_bib: ''
 url_code: 'https://github.com/yourusername/personality-health-study'
 url_dataset: 'https://osf.io/abc123/'
 url_poster: ''
-url_project: ''
 url_slides: ''
-url_source: ''
 url_video: ''
+image: ''
 ---
 
 This is your featured publication. You can add more details here about the study, including additional context about methodology, implications, or links to supplementary materials.

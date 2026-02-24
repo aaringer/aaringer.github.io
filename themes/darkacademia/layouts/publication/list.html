@@ -2,33 +2,127 @@
 <section class="page-list">
   <div class="container">
     <header class="list-header">
-      <h1 class="page-title">Publications</h1>
+      <h1 class="page-title">Publications & Presentations</h1>
     </header>
-    <div class="pub-list">
-      {{ range .Pages.ByDate.Reverse }}
-      <article class="pub-item">
-        <div class="pub-meta">
-          <span class="pub-date">{{ .Date.Format "2006" }}</span>
-          {{ with .Params.publication_types }}{{ range . }}<span class="pub-type pub-type-{{ . }}">{{ if eq . "article-journal" }}Journal Article{{ else if eq . "paper-conference" }}Conference Paper{{ else if eq . "thesis" }}Thesis{{ else }}{{ . | title }}{{ end }}</span>{{ end }}{{ end }}
-        </div>
-        <h2 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
-        {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
-        {{ if .Params.tags }}
-        <div class="tag-list">
-          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+
+    <!-- ── Publications ──────────────────────────────────────────── -->
+    <section class="pubs-section">
+      <h2 class="pub-section-heading">Publications</h2>
+
+      {{ $publications := where .Pages "Params.is_presentation" "ne" true }}
+      {{ if $publications }}
+        {{ range $publications.ByDate.Reverse.GroupByDate "2006" }}
+        <div class="year-group">
+          <div class="year-divider">
+            <span class="year-label">{{ .Key }}</span>
+          </div>
+          {{ range .Pages }}
+          <article class="pub-item">
+            <div class="pub-content-row">
+              <div class="pub-main-content">
+                <div class="pub-meta">
+                  {{ with .Params.publication_types }}{{ range . }}
+                  <span class="pub-type pub-type-{{ . }}">
+                    {{- if eq . "article-journal" }}Journal Article
+                    {{- else if eq . "paper-conference" }}Conference Paper
+                    {{- else if eq . "book-chapter" }}Book Chapter
+                    {{- else if eq . "thesis" }}Thesis
+                    {{- else if eq . "preprint" }}Preprint
+                    {{- else }}{{ . | title }}{{ end -}}
+                  </span>
+                  {{ end }}{{ end }}
+                </div>
+                <h2 class="pub-title">{{ .Title }}</h2>
+                {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+                {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+                {{ if .Params.tags }}
+                <div class="tag-list">
+                  {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <div class="pub-links">
+                  {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+                  {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+                  {{ with .Params.url_html }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">HTML</a>{{ end }}
+                  {{ with .Params.url_bib }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">BIB</a>{{ end }}
+                  {{ with .Params.url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
+                  {{ with .Params.url_dataset }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Data</a>{{ end }}
+                  {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+                  {{ with .Params.url_slides }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Slides</a>{{ end }}
+                </div>
+              </div>
+              {{ with .Params.image }}
+              <div class="pub-image-preview">
+                <img src="{{ . }}" alt="Figure preview" loading="lazy">
+              </div>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
         </div>
         {{ end }}
-        <div class="pub-links">
-          <a href="{{ .RelPermalink }}" class="link-btn">Details</a>
-          {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank">PDF</a>{{ end }}
-          {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
-          {{ with .Params.url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
-          {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
-        </div>
-      </article>
+      {{ else }}
+        <p class="pub-placeholder">Publications will appear here.</p>
       {{ end }}
-    </div>
+    </section>
+
+    <!-- ── Presentations ──────────────────────────────────────────── -->
+    <section class="pubs-section">
+      <h2 class="pub-section-heading">Presentations</h2>
+
+      {{ $presentations := where .Pages "Params.is_presentation" true }}
+      {{ if $presentations }}
+        {{ range $presentations.ByDate.Reverse.GroupByDate "2006" }}
+        <div class="year-group">
+          <div class="year-divider">
+            <span class="year-label">{{ .Key }}</span>
+          </div>
+          {{ range .Pages }}
+          <article class="pub-item">
+            <div class="pub-content-row">
+              <div class="pub-main-content">
+                <div class="pub-meta">
+                  {{ with .Params.publication_types }}{{ range . }}
+                  <span class="pub-type pub-type-{{ . }}">
+                    {{- if eq . "talk" }}Talk
+                    {{- else if eq . "invited-talk" }}Invited Talk
+                    {{- else if eq . "poster" }}Poster
+                    {{- else if eq . "workshop" }}Workshop
+                    {{- else }}{{ . | title }}{{ end -}}
+                  </span>
+                  {{ end }}{{ end }}
+                </div>
+                <h2 class="pub-title">{{ .Title }}</h2>
+                {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+                {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+                {{ if .Params.tags }}
+                <div class="tag-list">
+                  {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <div class="pub-links">
+                  {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+                  {{ with .Params.url_slides }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Slides</a>{{ end }}
+                  {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+                  {{ with .Params.url_video }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Video</a>{{ end }}
+                  {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+                </div>
+              </div>
+              {{ with .Params.image }}
+              <div class="pub-image-preview">
+                <img src="{{ . }}" alt="Figure preview" loading="lazy">
+              </div>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
+        </div>
+        {{ end }}
+      {{ else }}
+        <p class="pub-placeholder">Presentations will appear here.</p>
+      {{ end }}
+    </section>
+
   </div>
 </section>
 {{ end }}

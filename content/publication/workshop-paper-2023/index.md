@@ -16,4 +16,10 @@ tags:
 - Well-Being
 - Cultural Differences
 featured: false
+url_pdf: ''
+url_html: ''
+url_bib: ''
+url_code: ''
+url_dataset: ''
+image: ''
 ---
