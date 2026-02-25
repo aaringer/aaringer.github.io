@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Research
 view: citation
 banner:
   caption: ''

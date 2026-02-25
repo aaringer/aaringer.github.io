@@ -1581,5 +1581,5 @@ img { max-width: 100%; height: auto; display: block; }
 [data-theme="dark"] .tree-divider {
   background-color: var(--bg);
   background-blend-mode: screen;
-  filter: invert(1);
+  filter: grayscale(1) invert(1);
 }

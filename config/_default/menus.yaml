@@ -9,8 +9,8 @@ main:
   - name: Values
     url: /values/
     weight: 20
-  - name: Publications
-    url: /publication/
+  - name: Research
+    url: /research/
     weight: 30
   - name: Projects
     url: /project/
