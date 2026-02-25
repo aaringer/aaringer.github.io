@@ -9,12 +9,12 @@ main:
   - name: Values
     url: /values/
     weight: 20
-  - name: Publications
-    url: /publication/
+  - name: Research
+    url: /research/
     weight: 30
-  - name: Projects
-    url: /project/
-    weight: 40
+  # - name: Projects
+  #   url: /project/
+  #   weight: 40
  # - name: Teaching
  #   url: /teaching/
  #   weight: 45

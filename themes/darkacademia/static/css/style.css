@@ -313,7 +313,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── Sections ────────────────────────────────────────────────────── */
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: var(--bg);
   transition: background-color 0.25s ease;
 }
@@ -327,7 +327,7 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
@@ -564,7 +564,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .pub-item {
-  padding: 2rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--border);
   border-left: 3px solid transparent;
   padding-left: 1rem;
@@ -1539,9 +1539,6 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
-  box-shadow: 0 6px 28px var(--shadow-deep);
-  border: 1px solid rgba(184, 144, 42, 0.22);
 }
 
 @media (max-width: 900px) {
@@ -1574,12 +1571,11 @@ img { max-width: 100%; height: auto; display: block; }
   background-image: url('/images/Tree%20divider.jpg');
   background-blend-mode: multiply;
   background-repeat: repeat-x;
-  background-size: auto 250%;
-  background-position: center 45%;
+  background-size: auto 100%;
+  background-position: center top;
 }
 
 [data-theme="dark"] .tree-divider {
-  background-color: var(--bg);
-  background-blend-mode: screen;
-  filter: invert(1);
+  background-blend-mode: normal;
+  filter: grayscale(1) invert(1);
 }
