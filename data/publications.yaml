@@ -5,6 +5,74 @@
 
 publications:
 
+  - title: "Assessing the feasibility of a wearable consumer device for capturing newborns’ sleep patterns in naturalistic environments"
+    author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.**, Deboeck, P. R., Salisbury, A. L., Conradt, E., & Crowell, S. E."
+    year: 9999
+    type: "article-journal"
+    venue: "*Infant Behavior and Development*"
+    tags: [Infant Sleep, Wearables, Ecological Monitoring, Developmental Psychophysiology]
+    featured: true
+    doi: "http://dx.doi.org/10.2139/ssrn.6172335"
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+  - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
+    author: "Molina, N. C., **Aringer, A. S.**, Zhou, A. M., Conradt, E., Crowell, S. E., & Carter, S."
+    year: 9999
+    type: "article-journal"
+    venue: "*Journal of Latinx Psychology*"
+    tags: [Pregnancy, Racism and Discrimination, Latinx Psychology, Coping Processes, Mixed Methods]
+    featured: true
+    doi: ""
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+  - title: "An empirical examination of the striving persistent behavioral style among high achieving Black and Latine adolescents"
+    author: "Arce, M. A., Meza Lazaro, Y., Lechuga, C., **Aringer, A. S.**, Doan, S. N., Fung, J., Adjah, F. S., & Lau, A."
+    year: 9999
+    type: "article-journal"
+    venue: "*Journal of Prevention and Health Promotion*"
+    tags: [Adolescent Development, Health Equity, High-Effort Coping, Minority Youth, Prevention Science]
+    featured: true
+    doi: ""
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+  - title: "Validation of the john henryism active coping scale among high-achieving Black, Asian American and Pacific Islander, and Latine adolescents"
+    author: "Meza Lazaro, Y., Arce, M. A., Son, T. H., Fung, J., **Aringer, A. S.**, Doan, S. N., Adjah, F. S., & Lau, A."
+    year: 9999
+    type: "article-journal"
+    venue: "*American Journal of Orthopsychiatry*"
+    tags: [John Henryism, Psychometrics, Adolescent Mental Health, Cultural Psychology, Measurement Validation]
+    featured: true
+    doi: ""
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
   - title: "Personality Traits and Health Behavior Change: A Longitudinal Study"
     author: "Your Name, Collaborator Name, & Senior Researcher"
     year: 2024
@@ -17,27 +85,27 @@ publications:
     url_pdf: ""
     url_html: ""
     url_bib: ""
-    url_code: "https://github.com/yourusername/personality-health-study"
-    url_dataset: "https://osf.io/abc123/"
+    url_code: ""
+    url_dataset: ""
     url_poster: ""
     url_slides: ""
     image: ""
 
-  - title: "Social Support Buffers Stress Effects on Mental Health: Evidence from Daily Diary Study"
-    author: "Your Name, & Advisor Name"
-    year: 2023
+  - title: "Chronic physiological dysregulation and changes in depressive symptoms: Testing sex and race as vulnerability factors"
+    author: "Doan, S. N., **Aringer, A. S.**, Vicman, J., & Fuller-Rowell, T. M."
+    year: 2024
     type: "article-journal"
-    venue: "*Annual Convention of the Association for Psychological Science*"
-    abstract: "We conducted a 30-day daily diary study with 200 participants to examine how social support moderates the relationship between daily stressors and mental health outcomes. Results showed that perceived social support significantly buffered the negative effects of stress on mood and anxiety symptoms, particularly for individuals high in neuroticism."
-    tags: [Social Support, Stress, Mental Health, Daily Diary]
+    venue: "*Journal of Racial and Ethnic Health Disparities*"
+    abstract: ""
+    tags: [Allostatic load, Weathering Hypothesis, Depressive symptoms, Longitudinal study, Young adult mental health]
     featured: true
-    doi: ""
-    url_pdf: ""
+    doi: "https://doi.org/10.1007/s40615-024-02189-5"
+    url_pdf: "/uploads/articles/Doan et al, 2024, Journal of Rac and Eth Health Disp.pdf"
     url_html: ""
     url_bib: ""
     url_code: ""
     url_dataset: ""
-    url_poster: "/uploads/aps-poster-2023.pdf"
+    url_poster: ""
     url_slides: ""
     image: ""
 
@@ -46,7 +114,7 @@ publications:
     year: 2024
     type: "article-journal"
     venue: "*Psychological Medicine*"
-    abstract: "This cross-cultural study examined how emotional expression norms vary across Western and East Asian cultures and how these differences relate to subjective well-being. Using survey data from 800 participants across four countries, we found that the relationship between emotional expression and well-being was moderated by cultural values of individualism-collectivism."
+    abstract: ""
     tags: [adolescence, caregiving, COVID-19, diathesis stress/dual risk, differential susceptibility/biological sensitivity to context, post-traumatic stress, psychophysiology]
     featured: true
     doi: "https://doi.org/10.1017/S003329172400059X"
