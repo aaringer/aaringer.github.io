@@ -1539,7 +1539,6 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   height: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 @media (max-width: 900px) {
