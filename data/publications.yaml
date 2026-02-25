@@ -73,24 +73,6 @@ publications:
     url_slides: ""
     image: ""
 
-  - title: "Personality Traits and Health Behavior Change: A Longitudinal Study"
-    author: "Your Name, Collaborator Name, & Senior Researcher"
-    year: 2024
-    type: "article-journal"
-    venue: "*Journal of Personality and Social Psychology*"
-    abstract: "This longitudinal study examined how personality traits predict health behavior change over a 12-month period. Using data from 450 adults, we found that conscientiousness and emotional stability significantly predicted adoption of regular exercise routines, while openness to experience facilitated dietary changes. These findings suggest that personality-tailored interventions may improve health behavior change outcomes."
-    tags: [Personality, Health Psychology, Longitudinal Study, Behavior Change]
-    featured: true
-    doi: "10.1000/example.doi.123"
-    url_pdf: ""
-    url_html: ""
-    url_bib: ""
-    url_code: ""
-    url_dataset: ""
-    url_poster: ""
-    url_slides: ""
-    image: ""
-
   - title: "Chronic physiological dysregulation and changes in depressive symptoms: Testing sex and race as vulnerability factors"
     author: "Doan, S. N., **Aringer, A. S.**, Vicman, J., & Fuller-Rowell, T. M."
     year: 2024
@@ -130,13 +112,135 @@ publications:
 
 presentations:
 
+  - title: "Daily discrimination predicts same-day stress and stress carryover among pregnant Latinas: a pilot daily diary study"
+    author: "Molina, N. C., Zhou, A. M., **Aringer, A. S.**, Conradt, E., Carter, S., & Crowell, S. E."
+    year: 2026
+    type: "poster"
+    venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "It takes two to snooze: Partner affection predicts night-to-night sleep variability in pregnancy using real-world wearable data"
+    author: "**Aringer, A. S.**, Speck, B., Matsunaga, E., Molina, N. C., Raby, K. L., Conradt, E., & Crowell, S. E."
+    year: 2026
+    type: "poster"
+    venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Biological sensitivity to compassionate contexts: Testing a vantage sensitivity model of adolescent mental health"
+    author: "<u>Ha, C.</u>, **Aringer, A. S.**, Chiang, J. J., & Fuligni, A. J."
+    year: 2026
+    type: "poster"
+    venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Timing of stress exposure on hair cortisol during pregnancy and postpartum"
+    author: "<u>Chen, S. K.</u>, <u>Isenhour, J.</u>, <u>Tacana, T.</u>, <u>Speck, B.</u>, **Aringer, A. S.**, Crowell, S. E., Conradt, E., & Raby, K. L."
+    year: 2026
+    type: "poster"
+    venue: "*American Psychological Association, Washington, DC*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
+    author: "**Aringer, A. S.**, <u>Molina, N. C.</u>, <u>Zhou, A. M.</u>, Conradt, E., Crowell, S. E., & Carter, S."
+    year: 2026
+    type: "poster"
+    venue: "*Association for Psychological Science, Barcelona, Spain*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
+    author: "<u>Molina, N. C.</u>, **Aringer, A. S.**, <u>Zhou, A. M.</u>, Conradt, E., Crowell, S. E., & Carter, S."
+    year: 2025
+    type: "poster"
+    venue: "*Consortium of Oregon Diversity and Equity Scholars Conference, Eugene, OR*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Boosting baby's health: Prenatal social support, maternal cortisol, and neonatal thyroid-stimulating hormone"
+    author: "**Aringer, A. S.**, Santana, M. L., Zhou, A. M., Maylott, S. E., Wright, K., Conradt, E., & Crowell, S. E."
+    year: 2025
+    type: "poster"
+    venue: "*International Society for Developmental Psychobiology, San Diego, CA*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Stressed and sleepy: Examining the effects of sleepiness on adolescents’ telomere length"
+    author: "**Aringer, A. S.**, Doan, S. N., & Yates, T. M."
+    year: 2025
+    type: "poster"
+    venue: "*Society for Research in Child Development, Minneapolis, MN*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+
+
+
+
+
+
+
+
+
+
   - title: "Conscientiousness and Exercise Adherence: A Longitudinal Examination"
     author: "Your Name, & Advisor Name"
     year: 2024
-    type: "talk"
+    type: "poster"
     venue: "*Annual Convention of the Association for Psychological Science, San Francisco, CA*"
-    abstract: "This presentation examined how conscientiousness predicts exercise adherence over a 6-month period in a community sample of 300 adults. Findings suggest that facets of conscientiousness—particularly self-discipline and orderliness—uniquely predict sustained exercise behavior beyond general self-efficacy beliefs."
-    tags: [Personality, Health Psychology, Exercise, Longitudinal Study]
+    abstract: ""
+    tags: []
     featured: false
     doi: ""
     url_pdf: ""
