@@ -354,75 +354,61 @@ display: none;
 
 <div id="adding-publications-presentations-to-your-site" class="section level1">
 <h1>Adding Publications &amp; Presentations to Your Site</h1>
-<p>This guide walks through how to add new entries to the Publications
-&amp; Presentations page.</p>
+<p>All publications and presentations are managed in a <strong>single
+file</strong>:</p>
+<pre><code>data/publications.yaml</code></pre>
+<p>Open that file, add a new entry to the appropriate list, save, and
+you’re done.</p>
 <hr />
-<div id="how-the-page-works" class="section level2">
-<h2>How the page works</h2>
-<p>Every entry lives in <code>content/publication/</code> as its own
-folder containing an <code>index.md</code> file. The Publications page
-automatically splits entries into two sections:</p>
-<ul>
-<li><strong>Publications</strong> — any entry <em>without</em>
-<code>is_presentation: true</code></li>
-<li><strong>Presentations</strong> — any entry <em>with</em>
-<code>is_presentation: true</code></li>
-</ul>
-<p>Entries are grouped by year within each section, newest first.</p>
+<div id="file-structure" class="section level2">
+<h2>File structure</h2>
+<p>The YAML file has two top-level lists:</p>
+<pre class="yaml"><code>publications:
+  - title: &quot;...&quot;
+    ...
+
+presentations:
+  - title: &quot;...&quot;
+    ...</code></pre>
+<p>Entries in <code>publications:</code> appear in the
+<strong>Publications</strong> section of the page. Entries in
+<code>presentations:</code> appear in the <strong>Presentations</strong>
+section. Both sections are grouped and sorted by year automatically.</p>
 <hr />
 </div>
 <div id="adding-a-journal-article" class="section level2">
 <h2>Adding a Journal Article</h2>
-<ol style="list-style-type: decimal">
-<li><p>Create a new folder inside <code>content/publication/</code>. Use
-a short, descriptive name with no spaces or special characters. A good
-convention is <code>lastname-keyword-year</code> (e.g.,
-<code>aringer-personality-2025</code>).</p></li>
-<li><p>Inside that folder, create a file named
-<code>index.md</code>.</p></li>
-<li><p>Paste the following template and fill in your details:</p></li>
-</ol>
-<pre class="yaml"><code>---
-title: &#39;Your Full Article Title Here&#39;
-author: &#39;Aringer, A., Collaborator, B., &amp; Senior, C.&#39;
-date: &#39;2025-04-01&#39;
-publishDate: &#39;2025-04-01T00:00:00Z&#39;
-publication_types:
-- article-journal
-publication: &#39;*Journal of Full Name Here*&#39;
-abstract: |
-  Paste your abstract here. It can span multiple lines.
-  Just keep each line indented by two spaces.
-tags:
-- Personality
-- Health Psychology
-featured: false
-url_pdf: &#39;&#39;
-url_html: &#39;&#39;
-url_bib: &#39;&#39;
-url_code: &#39;&#39;
-url_dataset: &#39;&#39;
-url_poster: &#39;&#39;
-url_slides: &#39;&#39;
-image: &#39;&#39;
----</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Fill in each field (see <strong>Field Reference</strong> below
-for what each does).</p></li>
-<li><p>Any field left as <code>&#39;&#39;</code> (empty string) will simply not
-appear as a button on the page — no need to delete unused
-fields.</p></li>
-</ol>
+<p>Open <code>data/publications.yaml</code>, scroll to the
+<code>publications:</code> list, and append a new entry:</p>
+<pre class="yaml"><code>  - title: &quot;Your Full Article Title&quot;
+    author: &quot;Aringer, A., Collaborator, B., &amp; Senior, C.&quot;
+    year: 2025
+    type: &quot;article-journal&quot;
+    venue: &quot;*Journal of Full Name Here*&quot;
+    abstract: &quot;Paste your abstract here as a single line, or leave blank.&quot;
+    tags: [Personality, Health Psychology]
+    featured: false
+    doi: &quot;10.1037/pspp0000123&quot;
+    url_pdf: &quot;&quot;
+    url_html: &quot;&quot;
+    url_bib: &quot;&quot;
+    url_code: &quot;&quot;
+    url_dataset: &quot;&quot;
+    url_poster: &quot;&quot;
+    url_slides: &quot;&quot;
+    image: &quot;&quot;</code></pre>
+<p>Any field left as <code>&quot;&quot;</code> (empty string) simply won’t appear
+as a button on the page.</p>
 <hr />
 </div>
-<div id="adding-a-conference-paper-or-book-chapter" class="section level2">
-<h2>Adding a Conference Paper or Book Chapter</h2>
-<p>Same steps as a journal article, but change
-<code>publication_types</code> to one of:</p>
+<div id="publication-types" class="section level2">
+<h2>Publication types</h2>
+<p>Set <code>type:</code> to one of the following — this controls the
+badge shown on the page:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Type</th>
+<th><code>type</code> value</th>
 <th>Badge shown</th>
 </tr>
 </thead>
@@ -453,39 +439,33 @@ fields.</p></li>
 </div>
 <div id="adding-a-talk-or-oral-presentation" class="section level2">
 <h2>Adding a Talk or Oral Presentation</h2>
-<ol style="list-style-type: decimal">
-<li><p>Create a new folder inside <code>content/publication/</code>
-(e.g., <code>aps-talk-2025</code>).</p></li>
-<li><p>Create <code>index.md</code> inside it with this
-template:</p></li>
-</ol>
-<pre class="yaml"><code>---
-title: &#39;Your Talk Title Here&#39;
-author: &#39;Aringer, A., &amp; Collaborator, B.&#39;
-date: &#39;2025-05-15&#39;
-publishDate: &#39;2025-05-15T00:00:00Z&#39;
-is_presentation: true
-publication_types:
-- talk
-publication: &#39;*Conference Name, City, State*&#39;
-abstract: |
-  Optional abstract or brief description of the talk.
-tags:
-- Personality
-- Stress
-featured: false
-url_pdf: &#39;&#39;
-url_slides: &#39;&#39;
-url_video: &#39;&#39;
----</code></pre>
-<p>The key difference from a publication is the line:</p>
-<pre class="yaml"><code>is_presentation: true</code></pre>
-<p>This routes the entry to the <strong>Presentations</strong> section
-instead of <strong>Publications</strong>.</p>
+<p>Open <code>data/publications.yaml</code>, scroll to the
+<code>presentations:</code> list, and append:</p>
+<pre class="yaml"><code>  - title: &quot;Your Talk Title&quot;
+    author: &quot;Aringer, A., &amp; Collaborator, B.&quot;
+    year: 2025
+    type: &quot;talk&quot;
+    venue: &quot;*Conference Name, City, ST*&quot;
+    abstract: &quot;&quot;
+    tags: [Personality, Stress]
+    featured: false
+    doi: &quot;&quot;
+    url_pdf: &quot;&quot;
+    url_slides: &quot;&quot;
+    url_poster: &quot;&quot;
+    url_video: &quot;&quot;
+    image: &quot;&quot;</code></pre>
+<hr />
+</div>
+<div id="adding-a-poster" class="section level2">
+<h2>Adding a Poster</h2>
+<p>Same as a talk, just change <code>type</code>:</p>
+<pre class="yaml"><code>    type: &quot;poster&quot;</code></pre>
+<p>Presentation types available:</p>
 <table>
 <thead>
 <tr class="header">
-<th>Presentation type</th>
+<th><code>type</code> value</th>
 <th>Badge shown</th>
 </tr>
 </thead>
@@ -510,59 +490,55 @@ instead of <strong>Publications</strong>.</p>
 </table>
 <hr />
 </div>
-<div id="adding-a-poster" class="section level2">
-<h2>Adding a Poster</h2>
-<p>Same as a talk, but set <code>publication_types</code> to
-<code>poster</code>:</p>
-<pre class="yaml"><code>is_presentation: true
-publication_types:
-- poster</code></pre>
+<div id="featuring-a-publication-on-the-homepage" class="section level2">
+<h2>Featuring a publication on the homepage</h2>
+<p>Set <code>featured: true</code> on any entry under
+<code>publications:</code> to have it appear in the <strong>Featured
+Publications</strong> section on the homepage. The most recent 5
+publications also appear in the <strong>Recent Publications</strong>
+section regardless of this setting.</p>
+<hr />
+</div>
+<div id="adding-downloadable-files-pdf-bib-poster-etc." class="section level2">
+<h2>Adding downloadable files (PDF, BIB, Poster, etc.)</h2>
+<ol style="list-style-type: decimal">
+<li><p>Place the file in the <code>static/uploads/</code> folder (create
+this folder if it doesn’t exist). Example:
+<code>static/uploads/aringer-2025-personality.pdf</code></p></li>
+<li><p>Reference it in the entry using the <code>/uploads/</code>
+path:</p></li>
+</ol>
+<pre class="yaml"><code>    url_pdf: &quot;/uploads/aringer-2025-personality.pdf&quot;
+    url_bib: &quot;/uploads/aringer-2025-personality.bib&quot;
+    url_poster: &quot;/uploads/aringer-2025-poster.pdf&quot;</code></pre>
+<p>For links that live externally (DOI, OSF, GitHub, publisher HTML),
+paste the full URL:</p>
+<pre class="yaml"><code>    doi: &quot;10.1037/pspp0000123&quot;
+    url_html: &quot;https://journals.apa.org/doi/...&quot;
+    url_code: &quot;https://github.com/yourusername/repo&quot;
+    url_dataset: &quot;https://osf.io/abc123/&quot;</code></pre>
 <hr />
 </div>
 <div id="adding-a-figure-or-graph-preview" class="section level2">
-<h2>Adding a Figure or Graph Preview</h2>
-<p>Each entry can display a small thumbnail image on the right side of
-the entry. To use this:</p>
+<h2>Adding a figure or graph preview</h2>
+<p>To show a small thumbnail image alongside an entry:</p>
 <ol style="list-style-type: decimal">
-<li><p>Place your image file (PNG or JPG) inside the same folder as the
-<code>index.md</code>. Name it something clear like
-<code>figure1.png</code>.</p></li>
-<li><p>Set the <code>image</code> field to the filename (just the
-filename, not the full path):</p></li>
-</ol>
-<pre class="yaml"><code>image: &#39;figure1.png&#39;</code></pre>
-<p>The image will appear as a small preview (~130px wide) alongside the
-entry on the publications page.</p>
-<hr />
-</div>
-<div id="attaching-files-pdf-bib-slides-etc." class="section level2">
-<h2>Attaching Files (PDF, BIB, Slides, etc.)</h2>
-<p>For files you want to make directly downloadable (PDFs, .bib files,
-poster files):</p>
-<ol style="list-style-type: decimal">
-<li><p>Place the file in the <code>static/uploads/</code> folder (create
-this folder if it doesn’t exist yet). Example path:
-<code>static/uploads/aringer-2025-personality.pdf</code></p></li>
-<li><p>Reference it in your <code>index.md</code> using the
+<li><p>Place your image (PNG or JPG) in <code>static/uploads/</code>.
+Example: <code>static/uploads/aringer-2025-figure1.png</code></p></li>
+<li><p>Set the <code>image</code> field to the full
 <code>/uploads/</code> path:</p></li>
 </ol>
-<pre class="yaml"><code>url_pdf: &#39;/uploads/aringer-2025-personality.pdf&#39;
-url_bib: &#39;/uploads/aringer-2025-personality.bib&#39;
-url_poster: &#39;/uploads/aringer-2025-poster.pdf&#39;</code></pre>
-<p>For links that live externally (DOI, OSF, GitHub, journal HTML),
-paste the full URL directly:</p>
-<pre class="yaml"><code>doi: 10.1037/pspp0000123
-url_html: &#39;https://journals.apa.org/doi/...&#39;
-url_code: &#39;https://github.com/yourusername/repo&#39;
-url_dataset: &#39;https://osf.io/abc123/&#39;</code></pre>
+<pre class="yaml"><code>    image: &quot;/uploads/aringer-2025-figure1.png&quot;</code></pre>
+<p>The image will appear as a ~130px thumbnail on the right side of the
+entry.</p>
 <hr />
 </div>
 <div id="field-reference" class="section level2">
-<h2>Field Reference</h2>
+<h2>Field reference</h2>
 <table>
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -577,33 +553,25 @@ url_dataset: &#39;https://osf.io/abc123/&#39;</code></pre>
 </tr>
 <tr class="even">
 <td><code>author</code></td>
-<td>Authors as a formatted string (displayed as-is)</td>
+<td>Author string, displayed as-is</td>
 </tr>
 <tr class="odd">
-<td><code>date</code></td>
-<td>Publication/presentation date in <code>YYYY-MM-DD</code> format;
-controls year grouping</td>
+<td><code>year</code></td>
+<td>Four-digit year; controls which year group the entry appears
+under</td>
 </tr>
 <tr class="even">
-<td><code>publishDate</code></td>
-<td>Hugo internal date; set to same as <code>date</code></td>
+<td><code>type</code></td>
+<td>Entry type — determines the badge shown (see tables above)</td>
 </tr>
 <tr class="odd">
-<td><code>is_presentation</code></td>
-<td>Set to <code>true</code> to place in Presentations section; omit or
-set <code>false</code> for Publications</td>
-</tr>
-<tr class="even">
-<td><code>publication_types</code></td>
-<td>List with one type (see tables above)</td>
-</tr>
-<tr class="odd">
-<td><code>publication</code></td>
-<td>Venue name; wrap in <code>*asterisks*</code> to italicize</td>
+<td><code>venue</code></td>
+<td>Journal or conference name; wrap in <code>*asterisks*</code> to
+italicize</td>
 </tr>
 <tr class="even">
 <td><code>abstract</code></td>
-<td>Abstract text; use <code>\|</code> and indent subsequent lines</td>
+<td>Optional abstract text</td>
 </tr>
 <tr class="odd">
 <td><code>tags</code></td>
@@ -611,12 +579,12 @@ set <code>false</code> for Publications</td>
 </tr>
 <tr class="even">
 <td><code>featured</code></td>
-<td>Set <code>true</code> to show on the homepage featured section</td>
+<td><code>true</code> to show on the homepage Featured section
+(publications only)</td>
 </tr>
 <tr class="odd">
 <td><code>doi</code></td>
-<td>DOI without the <code>https://doi.org/</code> prefix (e.g.,
-<code>10.1037/abc123</code>)</td>
+<td>DOI without the <code>https://doi.org/</code> prefix</td>
 </tr>
 <tr class="even">
 <td><code>url_pdf</code></td>
@@ -652,8 +620,8 @@ set <code>false</code> for Publications</td>
 </tr>
 <tr class="even">
 <td><code>image</code></td>
-<td>Filename of a figure image placed in the same folder (for thumbnail
-preview)</td>
+<td><code>/uploads/</code> path to a figure image for the thumbnail
+preview</td>
 </tr>
 </tbody>
 </table>
@@ -662,24 +630,23 @@ preview)</td>
 <div id="quick-checklist" class="section level2">
 <h2>Quick checklist</h2>
 <ul class="task-list">
-<li><label><input type="checkbox"></input>Created a new folder under
-<code>content/publication/</code></label></li>
-<li><label><input type="checkbox"></input>Created <code>index.md</code> inside
-that folder</label></li>
-<li><label><input type="checkbox"></input>Set
-<code>is_presentation: true</code> if it’s a talk or poster</label></li>
-<li><label><input type="checkbox"></input>Set the correct
-<code>publication_types</code> value</label></li>
-<li><label><input type="checkbox"></input>Set <code>date</code> to the correct
-year (controls which year group it appears under)</label></li>
+<li><label><input type="checkbox"></input>Opened
+<code>data/publications.yaml</code></label></li>
+<li><label><input type="checkbox"></input>Added the new entry to the correct
+list (<code>publications:</code> or
+<code>presentations:</code>)</label></li>
+<li><label><input type="checkbox"></input>Set the correct <code>year</code>
+(controls year grouping)</label></li>
+<li><label><input type="checkbox"></input>Set the correct <code>type</code>
+(controls badge)</label></li>
 <li><label><input type="checkbox"></input>Filled in <code>doi</code> or
-<code>url_*</code> fields for any links you want to show</label></li>
+<code>url_*</code> fields for any links to show</label></li>
 <li><label><input type="checkbox"></input>Placed any downloadable files in
 <code>static/uploads/</code> and referenced them with
 <code>/uploads/filename</code></label></li>
-<li><label><input type="checkbox"></input>Placed any figure image in the
-entry’s folder and referenced it with just the
-<code>filename</code></label></li>
+<li><label><input type="checkbox"></input>Placed any figure image in
+<code>static/uploads/</code> and set
+<code>image: &quot;/uploads/filename&quot;</code></label></li>
 </ul>
 </div>
 </div>
