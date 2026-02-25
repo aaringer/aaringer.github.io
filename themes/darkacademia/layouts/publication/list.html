@@ -15,9 +15,71 @@
       {{ if $pubs }}
         {{ $sorted := sort $pubs "year" "desc" }}
 
-        {{/* Collect unique years in descending order */}}
-        {{ $years := slice }}
+        {{/* Separate "under-review" (year == 9999) from regular years */}}
+        {{ $underReview := slice }}
+        {{ $regular := slice }}
         {{ range $sorted }}
+          {{ if eq (string .year) "9999" }}
+            {{ $underReview = $underReview | append . }}
+          {{ else }}
+            {{ $regular = $regular | append . }}
+          {{ end }}
+        {{ end }}
+
+        {{/* Under Review group first */}}
+        {{ if $underReview }}
+        <div class="year-group">
+          <div class="year-divider">
+            <span class="year-label">Under Review</span>
+          </div>
+          {{ range $underReview }}
+          <article class="pub-item">
+            <div class="pub-content-row">
+              <div class="pub-main-content">
+                <div class="pub-meta">
+                  <span class="pub-type pub-type-{{ .type }}">
+                    {{- if eq .type "article-journal" }}Journal Article
+                    {{- else if eq .type "paper-conference" }}Conference Paper
+                    {{- else if eq .type "book-chapter" }}Book Chapter
+                    {{- else if eq .type "thesis" }}Thesis
+                    {{- else if eq .type "dissertation" }}Dissertation
+                    {{- else if eq .type "preprint" }}Preprint
+                    {{- else }}{{ .type | title }}{{ end -}}
+                  </span>
+                </div>
+                <h2 class="pub-title">{{ .title }}</h2>
+                {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
+                {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+                {{ if .tags }}
+                <div class="tag-list">
+                  {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <div class="pub-links">
+                  {{ with .url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+                  {{ with .doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+                  {{ with .url_html }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">HTML</a>{{ end }}
+                  {{ with .url_bib }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">BIB</a>{{ end }}
+                  {{ with .url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
+                  {{ with .url_dataset }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Data</a>{{ end }}
+                  {{ with .url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+                  {{ with .url_slides }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Slides</a>{{ end }}
+                </div>
+              </div>
+              {{ with .image }}
+              <div class="pub-image-preview">
+                <img src="{{ . }}" alt="Figure preview" loading="lazy">
+              </div>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* Collect unique years from regular items in descending order */}}
+        {{ $years := slice }}
+        {{ range $regular }}
           {{ $yr := string .year }}
           {{ if not (in $years $yr) }}
             {{ $years = $years | append $yr }}
@@ -30,7 +92,7 @@
             <div class="year-divider">
               <span class="year-label">{{ $yr }}</span>
             </div>
-            {{ range $sorted }}
+            {{ range $regular }}
               {{ if eq (string .year) $yr }}
               <article class="pub-item">
                 <div class="pub-content-row">
@@ -41,6 +103,7 @@
                         {{- else if eq .type "paper-conference" }}Conference Paper
                         {{- else if eq .type "book-chapter" }}Book Chapter
                         {{- else if eq .type "thesis" }}Thesis
+                        {{- else if eq .type "dissertation" }}Dissertation
                         {{- else if eq .type "preprint" }}Preprint
                         {{- else }}{{ .type | title }}{{ end -}}
                       </span>
@@ -87,9 +150,71 @@
       {{ if $presns }}
         {{ $sorted := sort $presns "year" "desc" }}
 
-        {{/* Collect unique years in descending order */}}
-        {{ $years := slice }}
+        {{/* Separate "under-review" (year == 9999) from regular years */}}
+        {{ $underReview := slice }}
+        {{ $regular := slice }}
         {{ range $sorted }}
+          {{ if eq (string .year) "9999" }}
+            {{ $underReview = $underReview | append . }}
+          {{ else }}
+            {{ $regular = $regular | append . }}
+          {{ end }}
+        {{ end }}
+
+        {{/* Under Review group first */}}
+        {{ if $underReview }}
+        <div class="year-group">
+          <div class="year-divider">
+            <span class="year-label">Under Review</span>
+          </div>
+          {{ range $underReview }}
+          <article class="pub-item">
+            <div class="pub-content-row">
+              <div class="pub-main-content">
+                <div class="pub-meta">
+                  <span class="pub-type pub-type-{{ .type }}">
+                    {{- if eq .type "talk" }}Talk
+                    {{- else if eq .type "invited-talk" }}Invited Talk
+                    {{- else if eq .type "poster" }}Poster
+                    {{- else if eq .type "workshop" }}Workshop
+                    {{- else if eq .type "panel" }}Panel
+                    {{- else if eq .type "symposium-talk" }}Symposium Talk
+                    {{- else if eq .type "symposium-chair" }}Symposium Chair
+                    {{- else if eq .type "symposium-co-chair" }}Symposium Co-Chair
+                    {{- else if eq .type "symposium-discussant" }}Symposium Discussant
+                    {{- else }}{{ .type | title }}{{ end -}}
+                  </span>
+                </div>
+                <h2 class="pub-title">{{ .title }}</h2>
+                {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
+                {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+                {{ if .tags }}
+                <div class="tag-list">
+                  {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <div class="pub-links">
+                  {{ with .url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+                  {{ with .url_slides }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Slides</a>{{ end }}
+                  {{ with .url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+                  {{ with .url_video }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Video</a>{{ end }}
+                  {{ with .doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+                </div>
+              </div>
+              {{ with .image }}
+              <div class="pub-image-preview">
+                <img src="{{ . }}" alt="Figure preview" loading="lazy">
+              </div>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* Collect unique years from regular items in descending order */}}
+        {{ $years := slice }}
+        {{ range $regular }}
           {{ $yr := string .year }}
           {{ if not (in $years $yr) }}
             {{ $years = $years | append $yr }}
@@ -102,7 +227,7 @@
             <div class="year-divider">
               <span class="year-label">{{ $yr }}</span>
             </div>
-            {{ range $sorted }}
+            {{ range $regular }}
               {{ if eq (string .year) $yr }}
               <article class="pub-item">
                 <div class="pub-content-row">
@@ -113,6 +238,11 @@
                         {{- else if eq .type "invited-talk" }}Invited Talk
                         {{- else if eq .type "poster" }}Poster
                         {{- else if eq .type "workshop" }}Workshop
+                        {{- else if eq .type "panel" }}Panel
+                        {{- else if eq .type "symposium-talk" }}Symposium Talk
+                        {{- else if eq .type "symposium-chair" }}Symposium Chair
+                        {{- else if eq .type "symposium-co-chair" }}Symposium Co-Chair
+                        {{- else if eq .type "symposium-discussant" }}Symposium Discussant
                         {{- else }}{{ .type | title }}{{ end -}}
                       </span>
                     </div>

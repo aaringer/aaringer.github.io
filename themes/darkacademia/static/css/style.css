@@ -641,9 +641,27 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 0.7rem;
 }
 
+.pub-type-book-chapter {
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: var(--tag-bg);
+}
+
+.pub-type-thesis,
+.pub-type-dissertation {
+  color: var(--text-muted);
+  border-color: var(--border);
+  background-color: var(--tag-bg);
+}
+
 /* Publication type badges for presentations */
 .pub-type-talk,
-.pub-type-invited-talk {
+.pub-type-invited-talk,
+.pub-type-panel,
+.pub-type-symposium-talk,
+.pub-type-symposium-chair,
+.pub-type-symposium-co-chair,
+.pub-type-symposium-discussant {
   color: var(--gold);
   border-color: var(--gold);
   background-color: var(--tag-bg);
@@ -717,7 +735,8 @@ img { max-width: 100%; height: auto; display: block; }
 .pub-image-preview {
   flex-shrink: 0;
   width: 130px;
-  margin-top: 0.2rem;
+  align-self: center;
+  margin-top: 1.5rem;
 }
 
 .pub-image-preview img {
@@ -727,6 +746,8 @@ img { max-width: 100%; height: auto; display: block; }
   border: 1px solid var(--border);
   object-fit: cover;
   display: block;
+  filter: sepia(40%) brightness(0.88) contrast(1.05);
+  opacity: 0.78;
 }
 
 .pub-placeholder {
