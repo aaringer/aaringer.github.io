@@ -18,15 +18,6 @@ sections:
         text: Download CV
         url: https://www.dropbox.com/scl/fi/j64f4wi1w8k58hac0dfzw/AlexaAringer_CV.docx?rlkey=xuq3w1ljqpz9dsm4zum0ja3hc&st=20ktnmxf&dl=0
 
-  # - block: markdown
-  #   content:
-  #     title: 'Research Overview'
-  #     subtitle: ''
-  #     text: |-
-  #       My research examines how social and psychological factors influence health and well-being across the lifespan. I use a combination of experimental methods, longitudinal surveys, and advanced statistical techniques to understand the complex interplay between personality, social relationships, and health outcomes. My work aims to identify modifiable factors that can promote resilience and positive health behaviors in diverse populations.
-  #   design:
-  #     columns: '1'
-
  - block: collection
    id: featured
    content:
@@ -85,4 +76,13 @@ sections:
   #     view: compact
   #     spacing:
   #       padding: [0, 0, 0, 0]
+  
+  # - block: markdown
+  #   content:
+  #     title: 'Research Overview'
+  #     subtitle: ''
+  #     text: |-
+  #       My research examines how social and psychological factors influence health and well-being across the lifespan. I use a combination of experimental methods, longitudinal surveys, and advanced statistical techniques to understand the complex interplay between personality, social relationships, and health outcomes. My work aims to identify modifiable factors that can promote resilience and positive health behaviors in diverse populations.
+  #   design:
+  #     columns: '1'
 ---
