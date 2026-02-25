@@ -1563,22 +1563,16 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Tree Divider ───────────────────────────────────────────────────── */
 .tree-divider {
-  display: flex;
-  width: 60%;
-  margin: 0 auto;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.tree-divider-img {
-  width: 50%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  width: 100%;
+  height: 80px;
+  background-image: url('/images/Tree divider.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
   mix-blend-mode: multiply;
 }
 
-[data-theme="dark"] .tree-divider-img {
+[data-theme="dark"] .tree-divider {
   filter: invert(1);
   mix-blend-mode: screen;
 }
