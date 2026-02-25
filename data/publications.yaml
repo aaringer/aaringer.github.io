@@ -26,11 +26,11 @@ publications:
   - title: "Social Support Buffers Stress Effects on Mental Health: Evidence from Daily Diary Study"
     author: "Your Name, & Advisor Name"
     year: 2023
-    type: "paper-conference"
+    type: "article-journal"
     venue: "*Annual Convention of the Association for Psychological Science*"
     abstract: "We conducted a 30-day daily diary study with 200 participants to examine how social support moderates the relationship between daily stressors and mental health outcomes. Results showed that perceived social support significantly buffered the negative effects of stress on mood and anxiety symptoms, particularly for individuals high in neuroticism."
     tags: [Social Support, Stress, Mental Health, Daily Diary]
-    featured: false
+    featured: true
     doi: ""
     url_pdf: ""
     url_html: ""
@@ -41,23 +41,23 @@ publications:
     url_slides: ""
     image: ""
 
-  - title: "Cultural Differences in Emotional Expression and Well-Being"
-    author: "Your Name, & International Collaborator"
-    year: 2023
+  - title: "A longitudinal investigation of caregiving environments, parasympathetic nervous system functioning, and adolescent post-traumatic stress symptoms during COVID-19: Evidence for high resting RSA as a susceptibility factor"
+    author: "Linde-Krieger, L., Rudd, K. L., **Aringer, A. S.**, & Yates, T. M."
+    year: 2024
     type: "article-journal"
-    venue: "*Emotion*"
+    venue: "*Psychological Medicine*"
     abstract: "This cross-cultural study examined how emotional expression norms vary across Western and East Asian cultures and how these differences relate to subjective well-being. Using survey data from 800 participants across four countries, we found that the relationship between emotional expression and well-being was moderated by cultural values of individualism-collectivism."
-    tags: [Cross-Cultural Psychology, Emotion, Well-Being, Cultural Differences]
-    featured: false
-    doi: ""
-    url_pdf: ""
+    tags: [adolescence, caregiving, COVID-19, diathesis stress/dual risk, differential susceptibility/biological sensitivity to context, post-traumatic stress, psychophysiology]
+    featured: true
+    doi: "https://doi.org/10.1017/S003329172400059X"
+    url_pdf: "/uploads/articles/Linde-Krieger et al 2024, Psych Medicine.pdf"
     url_html: ""
     url_bib: ""
     url_code: ""
     url_dataset: ""
     url_poster: ""
     url_slides: ""
-    image: ""
+    image: "/uploads/figures/LindeKriegeretal, 2024 img.png"
 
 
 presentations:
