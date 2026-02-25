@@ -693,7 +693,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .year-label {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   opacity: 0.55;
   letter-spacing: 0.12em;
