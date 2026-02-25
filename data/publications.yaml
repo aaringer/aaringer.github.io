@@ -1,0 +1,93 @@
+# All publications and presentations for aaringer.github.io
+# Add new entries to the appropriate list below.
+# Each entry appears as a row on the Publications page, grouped by year.
+# Images: place files in static/uploads/ and reference as /uploads/filename.png
+
+publications:
+
+  - title: "Personality Traits and Health Behavior Change: A Longitudinal Study"
+    author: "Your Name, Collaborator Name, & Senior Researcher"
+    year: 2024
+    type: "article-journal"
+    venue: "*Journal of Personality and Social Psychology*"
+    abstract: "This longitudinal study examined how personality traits predict health behavior change over a 12-month period. Using data from 450 adults, we found that conscientiousness and emotional stability significantly predicted adoption of regular exercise routines, while openness to experience facilitated dietary changes. These findings suggest that personality-tailored interventions may improve health behavior change outcomes."
+    tags: [Personality, Health Psychology, Longitudinal Study, Behavior Change]
+    featured: true
+    doi: "10.1000/example.doi.123"
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: "https://github.com/yourusername/personality-health-study"
+    url_dataset: "https://osf.io/abc123/"
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+  - title: "Social Support Buffers Stress Effects on Mental Health: Evidence from Daily Diary Study"
+    author: "Your Name, & Advisor Name"
+    year: 2023
+    type: "paper-conference"
+    venue: "*Annual Convention of the Association for Psychological Science*"
+    abstract: "We conducted a 30-day daily diary study with 200 participants to examine how social support moderates the relationship between daily stressors and mental health outcomes. Results showed that perceived social support significantly buffered the negative effects of stress on mood and anxiety symptoms, particularly for individuals high in neuroticism."
+    tags: [Social Support, Stress, Mental Health, Daily Diary]
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: "/uploads/aps-poster-2023.pdf"
+    url_slides: ""
+    image: ""
+
+  - title: "Cultural Differences in Emotional Expression and Well-Being"
+    author: "Your Name, & International Collaborator"
+    year: 2023
+    type: "article-journal"
+    venue: "*Emotion*"
+    abstract: "This cross-cultural study examined how emotional expression norms vary across Western and East Asian cultures and how these differences relate to subjective well-being. Using survey data from 800 participants across four countries, we found that the relationship between emotional expression and well-being was moderated by cultural values of individualism-collectivism."
+    tags: [Cross-Cultural Psychology, Emotion, Well-Being, Cultural Differences]
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+
+presentations:
+
+  - title: "Conscientiousness and Exercise Adherence: A Longitudinal Examination"
+    author: "Your Name, & Advisor Name"
+    year: 2024
+    type: "talk"
+    venue: "*Annual Convention of the Association for Psychological Science, San Francisco, CA*"
+    abstract: "This presentation examined how conscientiousness predicts exercise adherence over a 6-month period in a community sample of 300 adults. Findings suggest that facets of conscientiousness—particularly self-discipline and orderliness—uniquely predict sustained exercise behavior beyond general self-efficacy beliefs."
+    tags: [Personality, Health Psychology, Exercise, Longitudinal Study]
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Neuroticism Moderates the Stress–Mental Health Relationship: Daily Diary Evidence"
+    author: "Your Name, & Collaborator Name"
+    year: 2023
+    type: "poster"
+    venue: "*Society for Personality and Social Psychology Annual Convention, Atlanta, GA*"
+    abstract: "Using 30-day daily diary data from 180 adults, we examined whether neuroticism moderates associations between daily stressors and same-day affect. High-neuroticism individuals showed stronger stress reactivity on measures of negative affect and momentary anxiety, even after accounting for perceived social support."
+    tags: [Personality, Stress, Daily Diary, Mental Health]
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""

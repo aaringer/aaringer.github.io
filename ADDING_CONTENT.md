@@ -1,67 +1,69 @@
 # Adding Publications & Presentations to Your Site
 
-This guide walks through how to add new entries to the Publications & Presentations page.
+All publications and presentations are managed in a **single file**:
+
+```
+data/publications.yaml
+```
+
+Open that file, add a new entry to the appropriate list, save, and you're done.
 
 ---
 
-## How the page works
+## File structure
 
-Every entry lives in `content/publication/` as its own folder containing an `index.md` file. The Publications page automatically splits entries into two sections:
+The YAML file has two top-level lists:
 
-- **Publications** — any entry *without* `is_presentation: true`
-- **Presentations** — any entry *with* `is_presentation: true`
+```yaml
+publications:
+  - title: "..."
+    ...
 
-Entries are grouped by year within each section, newest first.
+presentations:
+  - title: "..."
+    ...
+```
+
+Entries in `publications:` appear in the **Publications** section of the page.
+Entries in `presentations:` appear in the **Presentations** section.
+Both sections are grouped and sorted by year automatically.
 
 ---
 
 ## Adding a Journal Article
 
-1. Create a new folder inside `content/publication/`. Use a short, descriptive name with no spaces or special characters. A good convention is `lastname-keyword-year` (e.g., `aringer-personality-2025`).
-
-2. Inside that folder, create a file named `index.md`.
-
-3. Paste the following template and fill in your details:
+Open `data/publications.yaml`, scroll to the `publications:` list, and append a new entry:
 
 ```yaml
----
-title: 'Your Full Article Title Here'
-author: 'Aringer, A., Collaborator, B., & Senior, C.'
-date: '2025-04-01'
-publishDate: '2025-04-01T00:00:00Z'
-publication_types:
-- article-journal
-publication: '*Journal of Full Name Here*'
-abstract: |
-  Paste your abstract here. It can span multiple lines.
-  Just keep each line indented by two spaces.
-tags:
-- Personality
-- Health Psychology
-featured: false
-url_pdf: ''
-url_html: ''
-url_bib: ''
-url_code: ''
-url_dataset: ''
-url_poster: ''
-url_slides: ''
-image: ''
----
+  - title: "Your Full Article Title"
+    author: "Aringer, A., Collaborator, B., & Senior, C."
+    year: 2025
+    type: "article-journal"
+    venue: "*Journal of Full Name Here*"
+    abstract: "Paste your abstract here as a single line, or leave blank."
+    tags: [Personality, Health Psychology]
+    featured: false
+    doi: "10.1037/pspp0000123"
+    url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
 ```
 
-4. Fill in each field (see **Field Reference** below for what each does).
-
-5. Any field left as `''` (empty string) will simply not appear as a button on the page — no need to delete unused fields.
+Any field left as `""` (empty string) simply won't appear as a button on the page.
 
 ---
 
-## Adding a Conference Paper or Book Chapter
+## Publication types
 
-Same steps as a journal article, but change `publication_types` to one of:
+Set `type:` to one of the following — this controls the badge shown on the page:
 
-| Type | Badge shown |
-|------|-------------|
+| `type` value | Badge shown |
+|---|---|
 | `article-journal` | Journal Article |
 | `paper-conference` | Conference Paper |
 | `book-chapter` | Book Chapter |
@@ -72,40 +74,39 @@ Same steps as a journal article, but change `publication_types` to one of:
 
 ## Adding a Talk or Oral Presentation
 
-1. Create a new folder inside `content/publication/` (e.g., `aps-talk-2025`).
-
-2. Create `index.md` inside it with this template:
+Open `data/publications.yaml`, scroll to the `presentations:` list, and append:
 
 ```yaml
----
-title: 'Your Talk Title Here'
-author: 'Aringer, A., & Collaborator, B.'
-date: '2025-05-15'
-publishDate: '2025-05-15T00:00:00Z'
-is_presentation: true
-publication_types:
-- talk
-publication: '*Conference Name, City, State*'
-abstract: |
-  Optional abstract or brief description of the talk.
-tags:
-- Personality
-- Stress
-featured: false
-url_pdf: ''
-url_slides: ''
-url_video: ''
----
+  - title: "Your Talk Title"
+    author: "Aringer, A., & Collaborator, B."
+    year: 2025
+    type: "talk"
+    venue: "*Conference Name, City, ST*"
+    abstract: ""
+    tags: [Personality, Stress]
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
 ```
 
-The key difference from a publication is the line:
+---
+
+## Adding a Poster
+
+Same as a talk, just change `type`:
+
 ```yaml
-is_presentation: true
+    type: "poster"
 ```
-This routes the entry to the **Presentations** section instead of **Publications**.
 
-| Presentation type | Badge shown |
-|-------------------|-------------|
+Presentation types available:
+
+| `type` value | Badge shown |
+|---|---|
 | `talk` | Talk |
 | `invited-talk` | Invited Talk |
 | `poster` | Poster |
@@ -113,74 +114,64 @@ This routes the entry to the **Presentations** section instead of **Publications
 
 ---
 
-## Adding a Poster
+## Featuring a publication on the homepage
 
-Same as a talk, but set `publication_types` to `poster`:
+Set `featured: true` on any entry under `publications:` to have it appear in the **Featured Publications** section on the homepage. The most recent 5 publications also appear in the **Recent Publications** section regardless of this setting.
+
+---
+
+## Adding downloadable files (PDF, BIB, Poster, etc.)
+
+1. Place the file in the `static/uploads/` folder (create this folder if it doesn't exist). Example: `static/uploads/aringer-2025-personality.pdf`
+
+2. Reference it in the entry using the `/uploads/` path:
 
 ```yaml
-is_presentation: true
-publication_types:
-- poster
+    url_pdf: "/uploads/aringer-2025-personality.pdf"
+    url_bib: "/uploads/aringer-2025-personality.bib"
+    url_poster: "/uploads/aringer-2025-poster.pdf"
+```
+
+For links that live externally (DOI, OSF, GitHub, publisher HTML), paste the full URL:
+
+```yaml
+    doi: "10.1037/pspp0000123"
+    url_html: "https://journals.apa.org/doi/..."
+    url_code: "https://github.com/yourusername/repo"
+    url_dataset: "https://osf.io/abc123/"
 ```
 
 ---
 
-## Adding a Figure or Graph Preview
+## Adding a figure or graph preview
 
-Each entry can display a small thumbnail image on the right side of the entry. To use this:
+To show a small thumbnail image alongside an entry:
 
-1. Place your image file (PNG or JPG) inside the same folder as the `index.md`. Name it something clear like `figure1.png`.
+1. Place your image (PNG or JPG) in `static/uploads/`. Example: `static/uploads/aringer-2025-figure1.png`
 
-2. Set the `image` field to the filename (just the filename, not the full path):
+2. Set the `image` field to the full `/uploads/` path:
 
 ```yaml
-image: 'figure1.png'
+    image: "/uploads/aringer-2025-figure1.png"
 ```
 
-The image will appear as a small preview (~130px wide) alongside the entry on the publications page.
+The image will appear as a ~130px thumbnail on the right side of the entry.
 
 ---
 
-## Attaching Files (PDF, BIB, Slides, etc.)
-
-For files you want to make directly downloadable (PDFs, .bib files, poster files):
-
-1. Place the file in the `static/uploads/` folder (create this folder if it doesn't exist yet). Example path: `static/uploads/aringer-2025-personality.pdf`
-
-2. Reference it in your `index.md` using the `/uploads/` path:
-
-```yaml
-url_pdf: '/uploads/aringer-2025-personality.pdf'
-url_bib: '/uploads/aringer-2025-personality.bib'
-url_poster: '/uploads/aringer-2025-poster.pdf'
-```
-
-For links that live externally (DOI, OSF, GitHub, journal HTML), paste the full URL directly:
-
-```yaml
-doi: 10.1037/pspp0000123
-url_html: 'https://journals.apa.org/doi/...'
-url_code: 'https://github.com/yourusername/repo'
-url_dataset: 'https://osf.io/abc123/'
-```
-
----
-
-## Field Reference
+## Field reference
 
 | Field | What it does |
-|-------|-------------|
+|---|---|
 | `title` | Full title of the work |
-| `author` | Authors as a formatted string (displayed as-is) |
-| `date` | Publication/presentation date in `YYYY-MM-DD` format; controls year grouping |
-| `publishDate` | Hugo internal date; set to same as `date` |
-| `is_presentation` | Set to `true` to place in Presentations section; omit or set `false` for Publications |
-| `publication_types` | List with one type (see tables above) |
-| `publication` | Venue name; wrap in `*asterisks*` to italicize |
-| `abstract` | Abstract text; use `\|` and indent subsequent lines |
+| `author` | Author string, displayed as-is |
+| `year` | Four-digit year; controls which year group the entry appears under |
+| `type` | Entry type — determines the badge shown (see tables above) |
+| `venue` | Journal or conference name; wrap in `*asterisks*` to italicize |
+| `abstract` | Optional abstract text |
 | `tags` | List of keyword tags shown as small badges |
-| `featured` | Set `true` to show on the homepage featured section |
-| `doi` | DOI without the `https://doi.org/` prefix (e.g., `10.1037/abc123`) |
+| `featured` | `true` to show on the homepage Featured section (publications only) |
+| `doi` | DOI without the `https://doi.org/` prefix |
 | `url_pdf` | Path or URL to the PDF |
 | `url_html` | URL to the HTML version on the publisher's site |
 | `url_bib` | Path to a `.bib` citation file |
@@ -189,17 +180,16 @@ url_dataset: 'https://osf.io/abc123/'
 | `url_poster` | Path or URL to poster PDF |
 | `url_slides` | Path or URL to slide deck |
 | `url_video` | URL to video recording |
-| `image` | Filename of a figure image placed in the same folder (for thumbnail preview) |
+| `image` | `/uploads/` path to a figure image for the thumbnail preview |
 
 ---
 
 ## Quick checklist
 
-- [ ] Created a new folder under `content/publication/`
-- [ ] Created `index.md` inside that folder
-- [ ] Set `is_presentation: true` if it's a talk or poster
-- [ ] Set the correct `publication_types` value
-- [ ] Set `date` to the correct year (controls which year group it appears under)
-- [ ] Filled in `doi` or `url_*` fields for any links you want to show
+- [ ] Opened `data/publications.yaml`
+- [ ] Added the new entry to the correct list (`publications:` or `presentations:`)
+- [ ] Set the correct `year` (controls year grouping)
+- [ ] Set the correct `type` (controls badge)
+- [ ] Filled in `doi` or `url_*` fields for any links to show
 - [ ] Placed any downloadable files in `static/uploads/` and referenced them with `/uploads/filename`
-- [ ] Placed any figure image in the entry's folder and referenced it with just the `filename`
+- [ ] Placed any figure image in `static/uploads/` and set `image: "/uploads/filename"`

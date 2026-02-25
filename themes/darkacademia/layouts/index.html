@@ -93,7 +93,8 @@
 </section>
 
 {{/* ── Featured Publications ───────────────────────────────────────── */}}
-{{ $featured := where (where site.RegularPages "Type" "publication") ".Params.featured" true }}
+{{ $allPubs := site.Data.publications.publications }}
+{{ $featured := where $allPubs "featured" true }}
 {{ if $featured }}
 <section class="section section-alt" id="featured">
   <div class="container">
@@ -102,26 +103,26 @@
       <a href="{{ "/publication/" | relURL }}" class="section-link">View all →</a>
     </div>
     <div class="pub-list">
-      {{ range ($featured.ByDate.Reverse) }}
+      {{ range (sort $featured "year" "desc") }}
       <article class="pub-item">
         <div class="pub-meta">
-          <span class="pub-date">{{ .Date.Format "2006" }}</span>
-          {{ with .Params.publication_types }}{{ range . }}<span class="pub-type pub-type-{{ . }}">{{ if eq . "article-journal" }}Journal Article{{ else if eq . "paper-conference" }}Conference Paper{{ else if eq . "thesis" }}Thesis{{ else }}{{ . }}{{ end }}</span>{{ end }}{{ end }}
+          <span class="pub-date">{{ .year }}</span>
+          <span class="pub-type pub-type-{{ .type }}">{{ if eq .type "article-journal" }}Journal Article{{ else if eq .type "paper-conference" }}Conference Paper{{ else if eq .type "thesis" }}Thesis{{ else if eq .type "preprint" }}Preprint{{ else }}{{ .type | title }}{{ end }}</span>
         </div>
-        <h3 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
-        {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
-        {{ if .Params.tags }}
+        <h3 class="pub-title">{{ .title }}</h3>
+        {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+        {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+        {{ if .tags }}
         <div class="tag-list">
-          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+          {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
         </div>
         {{ end }}
         <div class="pub-links">
-          <a href="{{ .RelPermalink }}" class="link-btn">Details</a>
-          {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank">PDF</a>{{ end }}
-          {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
-          {{ with .Params.url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
-          {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+          {{ with .url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+          {{ with .doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+          {{ with .url_html }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">HTML</a>{{ end }}
+          {{ with .url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
+          {{ with .url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
         </div>
       </article>
       {{ end }}
@@ -138,27 +139,26 @@
       <a href="{{ "/publication/" | relURL }}" class="section-link">View all →</a>
     </div>
     <div class="pub-list">
-      {{ $pubs := where site.RegularPages "Type" "publication" }}
-      {{ range ($pubs.ByDate.Reverse) }}
+      {{ range (first 5 (sort $allPubs "year" "desc")) }}
       <article class="pub-item">
         <div class="pub-meta">
-          <span class="pub-date">{{ .Date.Format "2006" }}</span>
-          {{ with .Params.publication_types }}{{ range . }}<span class="pub-type pub-type-{{ . }}">{{ if eq . "article-journal" }}Journal Article{{ else if eq . "paper-conference" }}Conference Paper{{ else if eq . "thesis" }}Thesis{{ else }}{{ . }}{{ end }}</span>{{ end }}{{ end }}
+          <span class="pub-date">{{ .year }}</span>
+          <span class="pub-type pub-type-{{ .type }}">{{ if eq .type "article-journal" }}Journal Article{{ else if eq .type "paper-conference" }}Conference Paper{{ else if eq .type "thesis" }}Thesis{{ else if eq .type "preprint" }}Preprint{{ else }}{{ .type | title }}{{ end }}</span>
         </div>
-        <h3 class="pub-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ with .Params.author }}<p class="pub-authors">{{ . }}</p>{{ end }}
-        {{ with .Params.publication }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
-        {{ if .Params.tags }}
+        <h3 class="pub-title">{{ .title }}</h3>
+        {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+        {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
+        {{ if .tags }}
         <div class="tag-list">
-          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+          {{ range .tags }}<span class="tag">{{ . }}</span>{{ end }}
         </div>
         {{ end }}
         <div class="pub-links">
-          <a href="{{ .RelPermalink }}" class="link-btn">Details</a>
-          {{ with .Params.url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank">PDF</a>{{ end }}
-          {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
-          {{ with .Params.url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
-          {{ with .Params.url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
+          {{ with .url_pdf }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">PDF</a>{{ end }}
+          {{ with .doi }}<a href="https://doi.org/{{ . }}" class="link-btn" target="_blank" rel="noopener">DOI</a>{{ end }}
+          {{ with .url_html }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">HTML</a>{{ end }}
+          {{ with .url_code }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Code</a>{{ end }}
+          {{ with .url_poster }}<a href="{{ . }}" class="link-btn" target="_blank" rel="noopener">Poster</a>{{ end }}
         </div>
       </article>
       {{ end }}
