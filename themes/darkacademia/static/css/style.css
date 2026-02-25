@@ -1567,12 +1567,6 @@ img { max-width: 100%; height: auto; display: block; }
   height: 180px;
   background-image: url('/images/Tree divider.jpg');
   background-repeat: repeat-x;
-  background-size: auto 280%;
-  background-position: center 62%;
-  mix-blend-mode: multiply;
-}
-
-[data-theme="dark"] .tree-divider {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  background-size: auto 250%;
+  background-position: center 45%;
 }
