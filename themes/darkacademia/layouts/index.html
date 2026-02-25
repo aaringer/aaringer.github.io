@@ -110,7 +110,7 @@
           <span class="pub-type pub-type-{{ .type }}">{{ if eq .type "article-journal" }}Journal Article{{ else if eq .type "paper-conference" }}Conference Paper{{ else if eq .type "thesis" }}Thesis{{ else if eq .type "preprint" }}Preprint{{ else }}{{ .type | title }}{{ end }}</span>
         </div>
         <h3 class="pub-title">{{ .title }}</h3>
-        {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+        {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
         {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
         {{ if .tags }}
         <div class="tag-list">
@@ -146,7 +146,7 @@
           <span class="pub-type pub-type-{{ .type }}">{{ if eq .type "article-journal" }}Journal Article{{ else if eq .type "paper-conference" }}Conference Paper{{ else if eq .type "thesis" }}Thesis{{ else if eq .type "preprint" }}Preprint{{ else }}{{ .type | title }}{{ end }}</span>
         </div>
         <h3 class="pub-title">{{ .title }}</h3>
-        {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+        {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
         {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
         {{ if .tags }}
         <div class="tag-list">
