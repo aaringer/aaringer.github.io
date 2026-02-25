@@ -114,7 +114,7 @@ presentations:
 
   - title: "Daily discrimination predicts same-day stress and stress carryover among pregnant Latinas: a pilot daily diary study"
     author: "Molina, N. C., Zhou, A. M., **Aringer, A. S.**, Conradt, E., Carter, S., & Crowell, S. E."
-    year: 2026
+    year: 9999
     type: "poster"
     venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
     tags: []
@@ -128,7 +128,7 @@ presentations:
 
   - title: "It takes two to snooze: Partner affection predicts night-to-night sleep variability in pregnancy using real-world wearable data"
     author: "**Aringer, A. S.**, Speck, B., Matsunaga, E., Molina, N. C., Raby, K. L., Conradt, E., & Crowell, S. E."
-    year: 2026
+    year: 9999
     type: "poster"
     venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
     tags: []
@@ -141,8 +141,8 @@ presentations:
     image: ""
 
   - title: "Biological sensitivity to compassionate contexts: Testing a vantage sensitivity model of adolescent mental health"
-    author: "<u>Ha, C.</u>, **Aringer, A. S.**, Chiang, J. J., & Fuligni, A. J."
-    year: 2026
+    author: "Ha, C.†, **Aringer, A. S.**, Chiang, J. J., & Fuligni, A. J."
+    year: 9999
     type: "poster"
     venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
     tags: []
@@ -155,8 +155,8 @@ presentations:
     image: ""
 
   - title: "Timing of stress exposure on hair cortisol during pregnancy and postpartum"
-    author: "<u>Chen, S. K.</u>, <u>Isenhour, J.</u>, <u>Tacana, T.</u>, <u>Speck, B.</u>, **Aringer, A. S.**, Crowell, S. E., Conradt, E., & Raby, K. L."
-    year: 2026
+    author: "Chen, S. K., Isenhour, J., Tacana, T., Speck, B., **Aringer, A. S.**, Crowell, S. E., Conradt, E., & Raby, K. L."
+    year: 9999
     type: "poster"
     venue: "*American Psychological Association, Washington, DC*"
     tags: []
@@ -169,7 +169,7 @@ presentations:
     image: ""
 
   - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
-    author: "**Aringer, A. S.**, <u>Molina, N. C.</u>, <u>Zhou, A. M.</u>, Conradt, E., Crowell, S. E., & Carter, S."
+    author: "**Aringer, A. S.**, Molina, N. C., Zhou, A. M., Conradt, E., Crowell, S. E., & Carter, S."
     year: 2026
     type: "poster"
     venue: "*Association for Psychological Science, Barcelona, Spain*"
@@ -183,7 +183,7 @@ presentations:
     image: ""
 
   - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
-    author: "<u>Molina, N. C.</u>, **Aringer, A. S.**, <u>Zhou, A. M.</u>, Conradt, E., Crowell, S. E., & Carter, S."
+    author: "Molina, N. C., **Aringer, A. S.**, Zhou, A. M., Conradt, E., Crowell, S. E., & Carter, S."
     year: 2025
     type: "poster"
     venue: "*Consortium of Oregon Diversity and Equity Scholars Conference, Eugene, OR*"
@@ -224,42 +224,227 @@ presentations:
     url_video: ""
     image: ""
 
+- title: "John Henryism moderating the effect of emotion suppression on blood pressure in high-achieving adolescents of color"
+  author: "Son, T. H., Meza Lazaro, Y., **Aringer, A. S.**, Farzana Saleem, F., Doan, S. N., Fung, J., & Lau, A. S."
+  year: 2024
+  type: "poster"
+  venue: "*Association for Behavioral and Cognitive Therapies, Philadelphia, PA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Persistence on unsolvable anagrams as a behavioral indicator of striving persistent behavioral style"
+  author: "Son, T. H., **Aringer, A. S.**, Onipede, Z., Farzana Saleem, F., Fung, J., Doan, S. N., & Lau, A. S."
+  year: 2024
+  type: "poster"
+  venue: "*Society for Research on Adolescence, Chicago, IL*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Parasympathetic pathways: Navigating early life adversity and adolescent ADHD symptomatology"
+  author: "Ghosh, M.†, Ruan, C.†, Atkins, L.†, **Aringer, A. S.**, Doan, S. N., & Yates, T. M."
+  year: 2024
+  type: "poster"
+  venue: "*Western Psychological Association, San Francisco, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Perinatal health risk and adolescent post-traumatic stress symptoms"
+  author: "**Aringer, A. S.** & Yates, T. M."
+  year: 2023
+  type: "poster"
+  venue: "*International Society for Traumatic Stress Studies, Los Angeles, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Investigating psychological distress in mothers and their partners"
+  author: "Doan, S. N., Henshaw, E., Swaminathan, K., **Aringer, A. S.**, Wood, T., & Lockhart, L."
+  year: 2023
+  type: "poster"
+  venue: "*Society for Behavioral Neuroendocrinology, Tours, France*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "The role of paternal psychosocial stress on DHEA in early postpartum primiparous mothers"
+  author: "Kinder, S., **Aringer, A. S.**, Kim, J., Ghosh, M., Henshaw, E., & Doan, S. N."
+  year: 2023
+  type: "poster"
+  venue: "*Western Psychological Association, Riverside, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Relations between neuroticism and dimensions of sleep"
+  author: "Ha, C.†, Chang, J.†, Poudel, A.†, Dee, A.†, **Aringer, A. S.**, & Doan, S. N."
+  year: 2023
+  type: "poster"
+  venue: "*Western Psychological Association, Riverside, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Perceived coronavirus threat and mental health"
+  author: "Krishnan, T.†, **Aringer, A. S.**, & Doan, S. N."
+  year: 2023
+  type: "poster"
+  venue: "*Western Psychological Association, Riverside, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Changes in adolescents’ sleep quality pre- and during the COVID-19 pandemic"
+  author: "**Aringer, A. S.**, Kinder, S.†, Doan, S. N., & Yates, T. M."
+  year: 2023
+  type: "poster"
+  venue: "*Society for Research on Adolescence, San Diego, CA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
+- title: "Comparing approaches to conceptualizing and analyzing childhood adversity"
+  author: "Bridgewater, J., Berzenski, S., Boullion, A., **Aringer, A. S.**, & Yates, T. M."
+  year: 2023
+  type: "poster"
+  venue: "*Society for Research in Child Development, Salt Lake City, UT*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
-  - title: "Conscientiousness and Exercise Adherence: A Longitudinal Examination"
-    author: "Your Name, & Advisor Name"
-    year: 2024
-    type: "poster"
-    venue: "*Annual Convention of the Association for Psychological Science, San Francisco, CA*"
-    abstract: ""
-    tags: []
-    featured: false
-    doi: ""
-    url_pdf: ""
-    url_slides: ""
-    url_poster: ""
-    url_video: ""
-    image: ""
+- title: "Youth post-traumatic stress during COVID-19"
+  author: "Linde-Krieger, L., Rudd, K. L., **Aringer, A. S.**, & Yates, T. M."
+  year: 2023
+  type: "poster"
+  venue: "*Society for Research in Child Development, Salt Lake City, UT*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
 
-  - title: "Neuroticism Moderates the Stress–Mental Health Relationship: Daily Diary Evidence"
-    author: "Your Name, & Collaborator Name"
-    year: 2023
-    type: "poster"
-    venue: "*Society for Personality and Social Psychology Annual Convention, Atlanta, GA*"
-    abstract: "Using 30-day daily diary data from 180 adults, we examined whether neuroticism moderates associations between daily stressors and same-day affect. High-neuroticism individuals showed stronger stress reactivity on measures of negative affect and momentary anxiety, even after accounting for perceived social support."
-    tags: [Personality, Stress, Daily Diary, Mental Health]
-    featured: false
-    doi: ""
-    url_pdf: ""
-    url_slides: ""
-    url_poster: ""
-    url_video: ""
-    image: ""
+- title: "Too close for comfort? Perceived mother-child closeness and maternal cortisol"
+  author: "Swaminathan, K., MacDonald, S., **Aringer, A. S.**, Norwood, M.†, & Doan, S. N."
+  year: 2023
+  type: "poster"
+  venue: "*Society for Research in Child Development, Salt Lake City, UT*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
+
+- title: "Pre-pandemic attachment security predicts adolescents’ positive COVID-19 adjustment"
+  author: "**Aringer, A. S.**, Linde-Krieger, L., & Yates, T. M."
+  year: 2022
+  type: "poster"
+  venue: "*International Society for Traumatic Stress Studies, Atlanta, GA*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
+
+- title: "Attachment security and post-traumatic stress symptoms during COVID-19"
+  author: "**Aringer, A. S.**, Linde-Krieger, L., Rudd, K. L., & Yates, T. M."
+  year: 2021
+  type: "poster"
+  venue: "*Society for Research in Child Development, Virtual*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
+
+- title: "Ethnic differences in perceptions of mental illness: Examining intergroup relations"
+  author: "**Aringer, A. S.** & Calanchini, J."
+  year: 2020
+  type: "poster"
+  venue: "*Western Psychological Association, Virtual*"
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
+
+- title: "Ethnic differences in perceptions of mental illness: Examining intergroup relations"
+  author: "**Aringer, A. S.** & Calanchini, J."
+  year: 2020
+  type: "poster"
+  venue: "*Undergraduate Psychology Research Conference, Riverside, CA*"
+  abstract: ""
+  tags: []
+  featured: false
+  doi: ""
+  url_pdf: ""
+  url_slides: ""
+  url_poster: ""
+  url_video: ""
+  image: ""
