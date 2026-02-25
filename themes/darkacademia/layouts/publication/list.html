@@ -46,7 +46,7 @@
                       </span>
                     </div>
                     <h2 class="pub-title">{{ .title }}</h2>
-                    {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+                    {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
                     {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
                     {{ if .tags }}
                     <div class="tag-list">
@@ -117,7 +117,7 @@
                       </span>
                     </div>
                     <h2 class="pub-title">{{ .title }}</h2>
-                    {{ with .author }}<p class="pub-authors">{{ . }}</p>{{ end }}
+                    {{ with .author }}<p class="pub-authors">{{ . | markdownify }}</p>{{ end }}
                     {{ with .venue }}<p class="pub-venue">{{ . | markdownify }}</p>{{ end }}
                     {{ if .tags }}
                     <div class="tag-list">
