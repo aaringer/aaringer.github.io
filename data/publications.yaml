@@ -107,7 +107,7 @@ publications:
     url_dataset: ""
     url_poster: ""
     url_slides: ""
-    image: "/uploads/figures/LindeKriegeretal, 2024 img.png"
+    image: ""
 
 presentations:
 
@@ -128,8 +128,8 @@ presentations:
   - title: "It takes two to snooze: Partner affection predicts night-to-night sleep variability in pregnancy using real-world wearable data"
     author: "**Aringer, A. S.**, Speck, B., Matsunaga, E., Molina, N. C., Raby, K. L., Conradt, E., & Crowell, S. E."
     year: 9999
-    type: "poster"
-    venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
+    type: "talk"
+    venue: "In P. R. Kaliush (Chair), *Sleep when the baby sleeps? Integrating compassion, innovative methods, and evidence-based care to reclaim sleep in the perinatal period. Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
     tags: []
     featured: false
     doi: ""
@@ -139,8 +139,8 @@ presentations:
     url_video: ""
     image: ""
 
-  - title: "Biological sensitivity to compassionate contexts: Testing a vantage sensitivity model of adolescent mental health"
-    author: "Ha, C.†, **Aringer, A. S.**, Chiang, J. J., & Fuligni, A. J."
+  - title: "Family Context and Inflammatory Reactivity in Adolescent Anxiety"
+    author: "Ha, C. E.†, **Aringer, A. S.**, Chiang, J. J., & Fuligni, A. J."
     year: 9999
     type: "poster"
     venue: "*Association for Behavioral and Cognitive Therapies, Baltimore, MD*"
@@ -158,6 +158,20 @@ presentations:
     year: 9999
     type: "poster"
     venue: "*American Psychological Association, Washington, DC*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+
+  - title: "Fetal programming of sleep: Prenatal maternal mental health and newborn sleep outcome"
+    author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.,** Conradt, E., & Crowell, S. E."
+    year: 9999
+    type: "talk"
+    venue: "In E. Conradt (Chair), *Stress meets sleep: Intergenerational influences from the womb to early childhood. American Psychological Association, Washington, DC*"
     tags: []
     featured: false
     doi: ""
