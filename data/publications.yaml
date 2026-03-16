@@ -171,7 +171,7 @@ presentations:
     author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.,** Conradt, E., & Crowell, S. E."
     year: 9999
     type: "talk"
-    venue: "In E. Conradt (Chair), *Stress meets sleep: Intergenerational influences from the womb to early childhood. American Psychological Association, Washington, DC*"
+    venue: "In E. Conradt (Chair), *Stress meets sleep: Intergenerational influences from the womb to early childhood. SLEEP meeting, Baltimore, Maryland*"
     tags: []
     featured: false
     doi: ""
@@ -186,6 +186,20 @@ presentations:
     year: 2026
     type: "poster"
     venue: "*Association for Psychological Science, Barcelona, Spain*"
+    tags: []
+    featured: false
+    doi: ""
+    url_pdf: ""
+    url_slides: ""
+    url_poster: ""
+    url_video: ""
+    image: ""
+    
+  - title: "Assessing the feasibility of a wearable consumer device for capturing newborns’ sleep patterns in naturalistic environments"
+    author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.**, Conradt, E., & Crowell, S. E."
+    year: 9999
+    type: "poster"
+    venue: "*Pacific Northwest Sleep and Circadian Network Meeting*"
     tags: []
     featured: false
     doi: ""
@@ -322,7 +336,7 @@ presentations:
     image: ""
 
   - title: "Relations between neuroticism and dimensions of sleep"
-    author: "Ha, C.†, Chang, J.†, Poudel, A.†, Dee, A.†, **Aringer, A. S.**, & Doan, S. N."
+    author: "Ha, C. E.†, Chang, J.†, Poudel, A.†, Dee, A.†, **Aringer, A. S.**, & Doan, S. N."
     year: 2023
     type: "poster"
     venue: "*Western Psychological Association, Riverside, CA*"
