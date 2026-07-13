@@ -63,7 +63,7 @@ publications:
     venue: "*Infant Behavior and Development*"
     tags: [Infant Sleep, Wearables, Ecological Monitoring, Developmental Psychophysiology]
     featured: true
-    doi: "https://doi.org/10.1016/j.infbeh.2026.102200"
+    doi: "10.1016/j.infbeh.2026.102200"
     url_pdf: "https://www.dropbox.com/scl/fi/g7yxrh5xfvhfh9cz75qg1/Speck-et-al-2026-Inf-Beh-Dev.pdf?rlkey=bm6pnm5reyvkmnltdir4d0tqa&dl=0"
     url_html: ""
     url_bib: ""
@@ -80,7 +80,7 @@ publications:
     venue: "*Journal of Prevention and Health Promotion*"
     tags: [Adolescent Development, Health Equity, High-Effort Coping, Minority Youth, Prevention Science]
     featured: true
-    doi: "https://doi.org/10.1177/26320770261463552"
+    doi: "10.1177/26320770261463552"
     url_pdf: ""
     url_html: ""
     url_bib: ""
@@ -98,7 +98,7 @@ publications:
     abstract: ""
     tags: [Allostatic load, Weathering Hypothesis, Depressive symptoms, Longitudinal study, Young adult mental health]
     featured: true
-    doi: "https://doi.org/10.1007/s40615-024-02189-5"
+    doi: "10.1007/s40615-024-02189-5"
     url_pdf: "/uploads/articles/Doan et al, 2024, Journal of Rac and Eth Health Disp.pdf"
     url_html: ""
     url_bib: ""
@@ -116,7 +116,7 @@ publications:
     abstract: ""
     tags: [adolescence, caregiving, COVID-19, diathesis stress/dual risk, differential susceptibility/biological sensitivity to context, post-traumatic stress, psychophysiology]
     featured: true
-    doi: "https://doi.org/10.1017/S003329172400059X"
+    doi: "10.1017/S003329172400059X"
     url_pdf: "/uploads/articles/Linde-Krieger et al 2024, Psych Medicine.pdf"
     url_html: ""
     url_bib: ""
