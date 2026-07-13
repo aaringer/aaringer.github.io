@@ -5,14 +5,14 @@
 
 publications:
 
-  - title: "Assessing the feasibility of a wearable consumer device for capturing newborns’ sleep patterns in naturalistic environments"
-    author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.**, Deboeck, P. R., Salisbury, A. L., Conradt, E., & Crowell, S. E."
+  - title: "Timing Matters: Testing Theoretical Models of Stress Exposure Across the Lifespan for Hair Cortisol Concentrations During Pregnancy and Postnatally"
+    author: "Chen, S.K., Isenhour, J., Speck, B., Tacana, T., **Aringer, A. S.**, Crowell, S. E., Conradt, E., & Raby, K. L."
     year: 9999
     type: "article-journal"
-    venue: "*Infant Behavior and Development*"
-    tags: [Infant Sleep, Wearables, Ecological Monitoring, Developmental Psychophysiology]
+    venue: "*Developmental Psychobiology*"
+    tags: []
     featured: true
-    doi: "http://dx.doi.org/10.2139/ssrn.6172335"
+    doi: ""
     url_pdf: ""
     url_html: ""
     url_bib: ""
@@ -22,15 +22,49 @@ publications:
     url_slides: ""
     image: ""
 
-  - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
-    author: "Molina, N. C., **Aringer, A. S.**, Zhou, A. M., Conradt, E., Crowell, S. E., & Carter, S."
+#  - title: "The labor of racism: A mixed-methods descriptive study of Latina resistance and coping during pregnancy"
+#    author: "Molina, N. C., **Aringer, A. S.**, Zhou, A. M., Conradt, E., Crowell, S. E., & Carter, S."
+#    year: 9999
+#    type: "article-journal"
+#    venue: "*Pending WAS REJECTED FROM JOURNAL OF LATINX PSYCH*"
+#    tags: [Pregnancy, Racism and Discrimination, Latinx Psychology, Coping Processes, Mixed Methods]
+#    featured: true
+#    doi: ""
+#    url_pdf: ""
+#    url_html: ""
+#    url_bib: ""
+#    url_code: ""
+#    url_dataset: ""
+#    url_poster: ""
+#    url_slides: ""
+#    image: ""
+    
+  - title: "Validation of the john henryism active coping scale among high-achieving Black, Asian American and Pacific Islander, and Latine adolescents"
+    author: "Meza Lazaro, Y., Arce, M. A., Son, T. H., Fung, J., **Aringer, A. S.**, Doan, S. N., Adjah, F. S., & Lau, A."
     year: 9999
     type: "article-journal"
-    venue: "*Journal of Latinx Psychology*"
-    tags: [Pregnancy, Racism and Discrimination, Latinx Psychology, Coping Processes, Mixed Methods]
+    venue: "*American Journal of Orthopsychiatry*"
+    tags: [John Henryism, Psychometrics, Adolescent Mental Health, Cultural Psychology, Measurement Validation]
     featured: true
     doi: ""
     url_pdf: ""
+    url_html: ""
+    url_bib: ""
+    url_code: ""
+    url_dataset: ""
+    url_poster: ""
+    url_slides: ""
+    image: ""
+
+  - title: "Assessing the feasibility of a wearable consumer device for capturing newborns’ sleep patterns in naturalistic environments"
+    author: "Speck, B., Matsunaga, E., El-Arabaty, S. A., **Aringer, A. S.**, Deboeck, P. R., Salisbury, A. L., Conradt, E., & Crowell, S. E."
+    year: 2026
+    type: "article-journal"
+    venue: "*Infant Behavior and Development*"
+    tags: [Infant Sleep, Wearables, Ecological Monitoring, Developmental Psychophysiology]
+    featured: true
+    doi: "https://doi.org/10.1016/j.infbeh.2026.102200"
+    url_pdf: "https://www.dropbox.com/scl/fi/g7yxrh5xfvhfh9cz75qg1/Speck-et-al-2026-Inf-Beh-Dev.pdf?rlkey=bm6pnm5reyvkmnltdir4d0tqa&dl=0"
     url_html: ""
     url_bib: ""
     url_code: ""
@@ -41,29 +75,12 @@ publications:
 
   - title: "An empirical examination of the striving persistent behavioral style among high achieving Black and Latine adolescents"
     author: "Arce, M. A., Meza Lazaro, Y., Lechuga, C., **Aringer, A. S.**, Doan, S. N., Fung, J., Adjah, F. S., & Lau, A."
-    year: 9999
+    year: 2026
     type: "article-journal"
     venue: "*Journal of Prevention and Health Promotion*"
     tags: [Adolescent Development, Health Equity, High-Effort Coping, Minority Youth, Prevention Science]
     featured: true
-    doi: ""
-    url_pdf: ""
-    url_html: ""
-    url_bib: ""
-    url_code: ""
-    url_dataset: ""
-    url_poster: ""
-    url_slides: ""
-    image: ""
-
-  - title: "Validation of the john henryism active coping scale among high-achieving Black, Asian American and Pacific Islander, and Latine adolescents"
-    author: "Meza Lazaro, Y., Arce, M. A., Son, T. H., Fung, J., **Aringer, A. S.**, Doan, S. N., Adjah, F. S., & Lau, A."
-    year: 9999
-    type: "article-journal"
-    venue: "*American Journal of Orthopsychiatry*"
-    tags: [John Henryism, Psychometrics, Adolescent Mental Health, Cultural Psychology, Measurement Validation]
-    featured: true
-    doi: ""
+    doi: "https://doi.org/10.1177/26320770261463552"
     url_pdf: ""
     url_html: ""
     url_bib: ""
@@ -191,7 +208,7 @@ presentations:
     doi: ""
     url_pdf: ""
     url_slides: ""
-    url_poster: ""
+    url_poster: "https://www.dropbox.com/scl/fi/9wto4j71r4kl935pvpbe9/2026-APS-poster-fin.pdf?rlkey=mi3q9ga73p2ge87gui5iulyz9&dl=0"
     url_video: ""
     image: ""
     
